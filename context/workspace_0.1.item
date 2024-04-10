@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_cW46sPc5Ee6lq8rU-_O6qw" confirmationNeeded="false" name="alice">
-    <contextParameter xmi:id="_cW46sfc5Ee6lq8rU-_O6qw" comment="EspaceWorkspace" name="folderName" prompt="folderName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/home"/>
+    <contextParameter xmi:id="_cW46sfc5Ee6lq8rU-_O6qw" comment="EspaceWorkspace" name="folderName" prompt="folderName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/home/aliceb/miage/sid/TOS/workspace/PROJETSID/"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_FP6_IPc5Ee6lq8rU-_O6qw" confirmationNeeded="false" name="Default">
     <contextParameter xmi:id="_b-XtAPc5Ee6lq8rU-_O6qw" comment="EspaceWorkspace" name="folderName" prompt="folderName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="/home"/>
