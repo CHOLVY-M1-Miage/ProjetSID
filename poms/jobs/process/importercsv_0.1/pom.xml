@@ -17,7 +17,7 @@
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <talend.pigudf.groupid>org.example.projetsid.pigudf</talend.pigudf.groupid>
     <talend.job.folder></talend.job.folder>
-    <talend.job.context>Default</talend.job.context>
+    <talend.job.context>jordan</talend.job.context>
     <talend.job.path>projetsid</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
@@ -112,6 +112,28 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.29</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.components.lib</groupId>
+      <artifactId>talend_file_enhanced</artifactId>
+      <version>1.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.talend.components</groupId>
+      <artifactId>talendcsv</artifactId>
+      <version>1.0.0</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
