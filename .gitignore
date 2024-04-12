@@ -1,3 +1,4 @@
 .settings
 files/BDD_CASIOP_FULL.csv
-tmp/*
+temp/*
+migration.log
