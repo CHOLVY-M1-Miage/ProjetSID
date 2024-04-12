@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_Wkp0MPjXEe6WnuYYo3gCcA" name="repository.metadataGenericSchema" dataPackage="_WkqbQPjXEe6WnuYYo3gCcA" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_WkqbQPjXEe6WnuYYo3gCcA" name="repository.metadataGenericSchema" dataManager="_Wkp0MPjXEe6WnuYYo3gCcA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_WkqbQfjXEe6WnuYYo3gCcA" id="_b3ZVoPjWEe6WnuYYo3gCcA" label="Product">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_WkqbQvjXEe6WnuYYo3gCcA" name="product_Id" label="Product_ID" length="12" talendType="id_String" key="true" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_WkqbQ_jXEe6WnuYYo3gCcA" name="product_Name" label="Product_Name" length="50" talendType="id_String" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_WkqbRPjXEe6WnuYYo3gCcA" name="product_Ref_Id" label="Product_Ref_ID" length="12" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
