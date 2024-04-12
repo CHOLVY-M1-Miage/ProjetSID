@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_acM-Qfi7Ee6tUrz43Ih9fw" name="Country" dataPackage="_acM-Qvi7Ee6tUrz43Ih9fw" Server="Localhost 127.0.0.1" FilePath="/home/ethankauy/TOS_DI-20211109_1610-V8.0.1/workspace/PROJETSID/files/TablesToDump/Contry.csv" Encoding="US-ASCII" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_acM-Qvi7Ee6tUrz43Ih9fw" name="default" dataManager="_acM-Qfi7Ee6tUrz43Ih9fw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_acM-Q_i7Ee6tUrz43Ih9fw" id="_TxQJMPi7Ee6tUrz43Ih9fw" label="contry">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_acM-RPi7Ee6tUrz43Ih9fw" label="Country" length="2" talendType="id_String" key="true" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_acM-Rfi7Ee6tUrz43Ih9fw" label="Country_Name" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_acM-Rvi7Ee6tUrz43Ih9fw" label="Country_ID" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
