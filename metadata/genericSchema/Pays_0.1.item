@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_cl6Ecfi1Ee6tUrz43Ih9fw" name="repository.metadataGenericSchema" dataPackage="_cl6rgPi1Ee6tUrz43Ih9fw" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_cl6rgPi1Ee6tUrz43Ih9fw" name="repository.metadataGenericSchema" dataManager="_cl6Ecfi1Ee6tUrz43Ih9fw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cl6rgfi1Ee6tUrz43Ih9fw" id="_9rqZ0Pi0Ee6tUrz43Ih9fw" label="Country">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cl6rgvi1Ee6tUrz43Ih9fw" name="country" label="Country" talendType="id_String" key="true"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cl6rg_i1Ee6tUrz43Ih9fw" name="country_Name" label="Country_Name" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cl6rhPi1Ee6tUrz43Ih9fw" name="country_Id" label="Country_ID" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

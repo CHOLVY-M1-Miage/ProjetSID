@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_h7po0PivEe6tUrz43Ih9fw" name="bdd_casiop" dataPackage="_h7sFEPivEe6tUrz43Ih9fw" Server="Localhost 127.0.0.1" FilePath="/home/ethankauy/TOS_DI-20211109_1610-V8.0.1/workspace/PROJETSID/files/BDD_CASIOP.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_h7sFEPivEe6tUrz43Ih9fw" name="default" dataManager="_h7po0PivEe6tUrz43Ih9fw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_h7sFEfivEe6tUrz43Ih9fw" id="_Y_rBwPiuEe6tUrz43Ih9fw" comment="uniquement sur les collones voulues" label="casiop">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFEvivEe6tUrz43Ih9fw" label="Order_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFE_ivEe6tUrz43Ih9fw" label="Order_Type" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFFPivEe6tUrz43Ih9fw" label="Order_Date" length="28" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFFfivEe6tUrz43Ih9fw" label="Delivery_Date" length="28" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFFvivEe6tUrz43Ih9fw" label="Order_Item_Num" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFF_ivEe6tUrz43Ih9fw" label="Quantity" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFGPivEe6tUrz43Ih9fw" label="Total_Retail_Price" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFGfivEe6tUrz43Ih9fw" label="CostPrice_Per_Unit" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFGvivEe6tUrz43Ih9fw" label="Product_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFG_ivEe6tUrz43Ih9fw" label="Product_Name" length="42" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFHPivEe6tUrz43Ih9fw" label="Product_Level" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFHfivEe6tUrz43Ih9fw" label="Product_Level_Name" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFHvivEe6tUrz43Ih9fw" label="Product_Ref_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFH_ivEe6tUrz43Ih9fw" label="Customer_ID" length="-1" talendType="id_List" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFIPivEe6tUrz43Ih9fw" label="Gender" length="1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFIfivEe6tUrz43Ih9fw" label="Birth_Date" length="29" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFIvivEe6tUrz43Ih9fw" label="Customer_Type_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFI_ivEe6tUrz43Ih9fw" label="Customer_Type" length="44" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFJPivEe6tUrz43Ih9fw" label="Customer_Group_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFJfivEe6tUrz43Ih9fw" label="Customer_Group" length="28" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFJvivEe6tUrz43Ih9fw" label="Employee_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFJ_ivEe6tUrz43Ih9fw" label="Employee_Job_Title" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFKPivEe6tUrz43Ih9fw" label="Employee_Salary" length="-1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFKfivEe6tUrz43Ih9fw" label="Employee_Country" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFKvivEe6tUrz43Ih9fw" label="Employee_Org_Level" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFK_ivEe6tUrz43Ih9fw" label="Org_Level_Name" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFLPivEe6tUrz43Ih9fw" label="Country" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFLfivEe6tUrz43Ih9fw" label="Country_Name" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFLvivEe6tUrz43Ih9fw" label="Country_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFL_ivEe6tUrz43Ih9fw" label="Country_FormerName" length="17" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

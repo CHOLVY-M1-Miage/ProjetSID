@@ -1,0 +1,4 @@
+Country
+-country: str [PK]
+-country_Name: str
+-country_id: str (inutil)
