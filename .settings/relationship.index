@@ -99,6 +99,25 @@
   } ]
 }, {
   "baseItem" : {
+    "id" : "_PgvgAAx0Ee-ddquNl4l79w",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_FPsVoPc5Ee6lq8rU-_O6qw",
+    "version" : "Latest",
+    "type" : "context"
+  }, {
+    "id" : "fonctionsPerso",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "_h7htAPivEe6tUrz43Ih9fw - casiop",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_S3WmkPjYEe6WnuYYo3gCcA",
     "version" : "0.1",
     "type" : "job"

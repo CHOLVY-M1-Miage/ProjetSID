@@ -1,0 +1,8 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="TalendDate.parseDate(&quot;yyyy/MMM/dd&quot;, row4.date.split(&quot; &quot;)[5] + &quot;/&quot; + getMonthNumber(row4.date.split(&quot; &quot;)[1]) + &quot;/&quot; + row4.date.split(&quot; &quot;)[2]);">
+  <variables name="row4.date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="TalendDate.parseDate(&quot;EEE MMM dd HH:mm:ss zzz yyyy&quot;, row4.date) " value="null" talendType="id_String"/>
+  <variables name="TalendDate.parseDate(&quot;EEE MMM dd HH:mm:ss zzz yyyy&quot;, row4.date.trim()) " value="null" talendType="id_String"/>
+  <variables name="row4.date.split(&quot; &quot;)[5] + &quot;/&quot; + row4.date.split(&quot; &quot;)[1] + &quot;/&quot; + row4.date.split(&quot; &quot;)[2]; " value="null" talendType="id_String"/>
+  <variables name="TalendDate.parseDate(&quot;yyyy/MMM/dd&quot;, row4.date.split(&quot; &quot;)[5] + &quot;/&quot; + row4.date.split(&quot; &quot;)[1] + &quot;/&quot; + row4.date.split(&quot; &quot;)[2]); " value="null" talendType="id_Date"/>
+</expression:EMFExpression>
