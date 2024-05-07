@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
-  <TalendMetadata:GenericSchemaConnection xmi:id="_-bZG0Ao9Ee-mjYfdFAa-XA" name="repository.metadataGenericSchema" dataPackage="_-bZG0Qo9Ee-mjYfdFAa-XA"/>
+  <TalendMetadata:GenericSchemaConnection xmi:id="_-bZG0Ao9Ee-mjYfdFAa-XA" name="repository.metadataGenericSchema" dataPackage="_-bZG0Qo9Ee-mjYfdFAa-XA" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
   <TalendMetadata:GenericPackage xmi:id="_-bZG0Qo9Ee-mjYfdFAa-XA" name="repository.metadataGenericSchema" dataManager="_-bZG0Ao9Ee-mjYfdFAa-XA">
-    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_-bZG0go9Ee-mjYfdFAa-XA" id="_dYd4cAo9Ee-mjYfdFAa-XA" label="metadata">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_-bZG0go9Ee-mjYfdFAa-XA" id="_dYd4cAo9Ee-mjYfdFAa-XA" label="CustomerGroup">
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-bZG0wo9Ee-mjYfdFAa-XA" name="Customer_Group_ID" label="Customer_Group_ID" length="2" talendType="id_String" key="true" nullable="false"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_-bZG1Ao9Ee-mjYfdFAa-XA" name="Customer_Group" label="Customer_Group" length="40" talendType="id_String" nullable="false"/>
     </ownedElement>

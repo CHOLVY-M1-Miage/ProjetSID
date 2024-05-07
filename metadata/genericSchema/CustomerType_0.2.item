@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_5SqSEAxkEe-1mtRYpt4UmQ" name="CustomerType" label="CustomerType" dataPackage="_WkqbQPjXEe6WnuYYo3gCcA" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
+  <TalendMetadata:GenericPackage xmi:id="_WkqbQPjXEe6WnuYYo3gCcA" name="repository.metadataGenericSchema" dataManager="_5SqSEAxkEe-1mtRYpt4UmQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_WkqbQfjXEe6WnuYYo3gCcA" id="_b3ZVoPjWEe6WnuYYo3gCcA" label="CustomerType">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_WkqbQvjXEe6WnuYYo3gCcA" name="customer_Type_Id" label="Customer_Type_ID" length="4" talendType="id_String" key="true" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_WkqbQ_jXEe6WnuYYo3gCcA" name="customer_Type_Name" label="Customer_Type" length="50" talendType="id_String" nullable="false"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_WkqbRPjXEe6WnuYYo3gCcA" name="customer_Group_Ref_Id" label="Customer_Group_ID" length="2" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
