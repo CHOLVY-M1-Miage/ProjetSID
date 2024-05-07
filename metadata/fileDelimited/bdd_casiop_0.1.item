@@ -26,6 +26,8 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFJvivEe6tUrz43Ih9fw" label="Employee_ID" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFJ_ivEe6tUrz43Ih9fw" label="Employee_Job_Title" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFKPivEe6tUrz43Ih9fw" label="Employee_Salary" length="-1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YNaoUAyMEe-2uoO-FvNXXQ" name="Employee_Gender" label="Employee_Gender" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_YeMPQAyMEe-2uoO-FvNXXQ" name="Emp_Hire_Date" label="Emp_Hire_Date" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFKfivEe6tUrz43Ih9fw" label="Employee_Country" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFKvivEe6tUrz43Ih9fw" label="Employee_Org_Level" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_h7sFK_ivEe6tUrz43Ih9fw" label="Org_Level_Name" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>

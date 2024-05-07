@@ -3748,6 +3748,12 @@ public class Quarter implements TalendJob {
 			return this.Delivery_Date;
 		}
 
+		public String Emp_Hire_Date;
+
+		public String getEmp_Hire_Date() {
+			return this.Emp_Hire_Date;
+		}
+
 		public String Birth_Date;
 
 		public String getBirth_Date() {
@@ -3826,6 +3832,8 @@ public class Quarter implements TalendJob {
 
 					this.Delivery_Date = readString(dis);
 
+					this.Emp_Hire_Date = readString(dis);
+
 					this.Birth_Date = readString(dis);
 
 				} catch (IOException e) {
@@ -3848,6 +3856,8 @@ public class Quarter implements TalendJob {
 					this.Order_Date = readString(dis);
 
 					this.Delivery_Date = readString(dis);
+
+					this.Emp_Hire_Date = readString(dis);
 
 					this.Birth_Date = readString(dis);
 
@@ -3873,6 +3883,10 @@ public class Quarter implements TalendJob {
 
 				// String
 
+				writeString(this.Emp_Hire_Date, dos);
+
+				// String
+
 				writeString(this.Birth_Date, dos);
 
 			} catch (IOException e) {
@@ -3894,6 +3908,10 @@ public class Quarter implements TalendJob {
 
 				// String
 
+				writeString(this.Emp_Hire_Date, dos);
+
+				// String
+
 				writeString(this.Birth_Date, dos);
 
 			} catch (IOException e) {
@@ -3909,6 +3927,7 @@ public class Quarter implements TalendJob {
 			sb.append("[");
 			sb.append("Order_Date=" + Order_Date);
 			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Emp_Hire_Date=" + Emp_Hire_Date);
 			sb.append(",Birth_Date=" + Birth_Date);
 			sb.append("]");
 
@@ -3964,6 +3983,12 @@ public class Quarter implements TalendJob {
 			return this.Delivery_Date;
 		}
 
+		public String Emp_Hire_Date;
+
+		public String getEmp_Hire_Date() {
+			return this.Emp_Hire_Date;
+		}
+
 		public String Birth_Date;
 
 		public String getBirth_Date() {
@@ -4042,6 +4067,8 @@ public class Quarter implements TalendJob {
 
 					this.Delivery_Date = readString(dis);
 
+					this.Emp_Hire_Date = readString(dis);
+
 					this.Birth_Date = readString(dis);
 
 				} catch (IOException e) {
@@ -4064,6 +4091,8 @@ public class Quarter implements TalendJob {
 					this.Order_Date = readString(dis);
 
 					this.Delivery_Date = readString(dis);
+
+					this.Emp_Hire_Date = readString(dis);
 
 					this.Birth_Date = readString(dis);
 
@@ -4089,6 +4118,10 @@ public class Quarter implements TalendJob {
 
 				// String
 
+				writeString(this.Emp_Hire_Date, dos);
+
+				// String
+
 				writeString(this.Birth_Date, dos);
 
 			} catch (IOException e) {
@@ -4110,6 +4143,10 @@ public class Quarter implements TalendJob {
 
 				// String
 
+				writeString(this.Emp_Hire_Date, dos);
+
+				// String
+
 				writeString(this.Birth_Date, dos);
 
 			} catch (IOException e) {
@@ -4125,6 +4162,7 @@ public class Quarter implements TalendJob {
 			sb.append("[");
 			sb.append("Order_Date=" + Order_Date);
 			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Emp_Hire_Date=" + Emp_Hire_Date);
 			sb.append(",Birth_Date=" + Birth_Date);
 			sb.append("]");
 
@@ -4304,6 +4342,18 @@ public class Quarter implements TalendJob {
 
 		public Integer getEmployee_Salary() {
 			return this.Employee_Salary;
+		}
+
+		public String Employee_Gender;
+
+		public String getEmployee_Gender() {
+			return this.Employee_Gender;
+		}
+
+		public String Emp_Hire_Date;
+
+		public String getEmp_Hire_Date() {
+			return this.Emp_Hire_Date;
 		}
 
 		public String Employee_Country;
@@ -4509,6 +4559,10 @@ public class Quarter implements TalendJob {
 
 					this.Employee_Salary = readInteger(dis);
 
+					this.Employee_Gender = readString(dis);
+
+					this.Emp_Hire_Date = readString(dis);
+
 					this.Employee_Country = readString(dis);
 
 					this.Employee_Org_Level = readString(dis);
@@ -4593,6 +4647,10 @@ public class Quarter implements TalendJob {
 					this.Employee_Job_Title = readString(dis);
 
 					this.Employee_Salary = readInteger(dis);
+
+					this.Employee_Gender = readString(dis);
+
+					this.Emp_Hire_Date = readString(dis);
 
 					this.Employee_Country = readString(dis);
 
@@ -4719,6 +4777,14 @@ public class Quarter implements TalendJob {
 				// Integer
 
 				writeInteger(this.Employee_Salary, dos);
+
+				// String
+
+				writeString(this.Employee_Gender, dos);
+
+				// String
+
+				writeString(this.Emp_Hire_Date, dos);
 
 				// String
 
@@ -4856,6 +4922,14 @@ public class Quarter implements TalendJob {
 
 				// String
 
+				writeString(this.Employee_Gender, dos);
+
+				// String
+
+				writeString(this.Emp_Hire_Date, dos);
+
+				// String
+
 				writeString(this.Employee_Country, dos);
 
 				// String
@@ -4916,6 +4990,8 @@ public class Quarter implements TalendJob {
 			sb.append(",Employee_ID=" + Employee_ID);
 			sb.append(",Employee_Job_Title=" + Employee_Job_Title);
 			sb.append(",Employee_Salary=" + String.valueOf(Employee_Salary));
+			sb.append(",Employee_Gender=" + Employee_Gender);
+			sb.append(",Emp_Hire_Date=" + Emp_Hire_Date);
 			sb.append(",Employee_Country=" + Employee_Country);
 			sb.append(",Employee_Org_Level=" + Employee_Org_Level);
 			sb.append(",Org_Level_Name=" + Org_Level_Name);
@@ -5874,6 +5950,10 @@ public class Quarter implements TalendJob {
 
 								row1.Employee_Salary = null;
 
+								row1.Employee_Gender = null;
+
+								row1.Emp_Hire_Date = null;
+
 								row1.Employee_Country = null;
 
 								row1.Employee_Org_Level = null;
@@ -6253,6 +6333,30 @@ public class Quarter implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
+									row1.Employee_Gender = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+
+								} else {
+
+									row1.Employee_Gender = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 24;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
+									row1.Emp_Hire_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+
+								} else {
+
+									row1.Emp_Hire_Date = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 25;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
 									row1.Employee_Country = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
@@ -6261,7 +6365,7 @@ public class Quarter implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 24;
+								columnIndexWithD_tFileInputDelimited_1 = 26;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -6273,7 +6377,7 @@ public class Quarter implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 25;
+								columnIndexWithD_tFileInputDelimited_1 = 27;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -6285,7 +6389,7 @@ public class Quarter implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 26;
+								columnIndexWithD_tFileInputDelimited_1 = 28;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -6297,7 +6401,7 @@ public class Quarter implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 27;
+								columnIndexWithD_tFileInputDelimited_1 = 29;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -6309,7 +6413,7 @@ public class Quarter implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 28;
+								columnIndexWithD_tFileInputDelimited_1 = 30;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -6321,7 +6425,7 @@ public class Quarter implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 29;
+								columnIndexWithD_tFileInputDelimited_1 = 31;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -6395,6 +6499,8 @@ public class Quarter implements TalendJob {
 							row2.Order_Date = row1.Order_Date;
 
 							row2.Delivery_Date = row1.Delivery_Date;
+
+							row2.Emp_Hire_Date = row1.Emp_Hire_Date;
 
 							row2.Birth_Date = row1.Birth_Date;
 
@@ -8120,6 +8226,6 @@ public class Quarter implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 215034 characters generated by Talend Open Studio for Data Integration on the
- * 7 mai 2024 à 17:41:00 CEST
+ * 217601 characters generated by Talend Open Studio for Data Integration on the
+ * 7 mai 2024 à 18:18:40 CEST
  ************************************************************************************************/

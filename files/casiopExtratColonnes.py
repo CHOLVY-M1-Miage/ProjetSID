@@ -47,9 +47,9 @@ def filtre_colonnes():
     colonnes.append(False) #employee_end_date
     colonnes.append(True) #employee_job_title
     colonnes.append(True) #employee_salary
-    colonnes.append(False) #employee_gender
+    colonnes.append(True) #employee_gender
     colonnes.append(False) #employee_birth_date
-    colonnes.append(False) #employee_hire_date
+    colonnes.append(True) #employee_hire_date
     colonnes.append(False) #employee_term_date
     colonnes.append(False) #employee_name
     colonnes.append(True) #employee_country
