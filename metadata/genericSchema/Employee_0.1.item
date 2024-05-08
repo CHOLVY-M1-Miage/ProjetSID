@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
-  <TalendMetadata:GenericSchemaConnection xmi:id="_XmRQIAyJEe-ddquNl4l79w" name="repository.metadataGenericSchema" dataPackage="_XmRQIQyJEe-ddquNl4l79w"/>
+  <TalendMetadata:GenericSchemaConnection xmi:id="_XmRQIAyJEe-ddquNl4l79w" name="repository.metadataGenericSchema" dataPackage="_XmRQIQyJEe-ddquNl4l79w" mappingTypeUsed="true" mappingTypeId="postgres_id"/>
   <TalendMetadata:GenericPackage xmi:id="_XmRQIQyJEe-ddquNl4l79w" name="repository.metadataGenericSchema" dataManager="_XmRQIAyJEe-ddquNl4l79w">
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_XmRQIgyJEe-ddquNl4l79w" id="_D1GLsAyJEe-ddquNl4l79w" label="Employee">
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQIwyJEe-ddquNl4l79w" name="Employee_ID" label="Employee_ID" length="30" talendType="id_String" key="true"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJAyJEe-ddquNl4l79w" name="Employee_Start_Date" label="Employee_Start_Date" length="30" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJQyJEe-ddquNl4l79w" name="Employee_Job_Title" label="Employee_Job_Title" length="30" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJgyJEe-ddquNl4l79w" name="Employee_Salary" label="Employee_Salary" length="-1" talendType="id_Integer"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJwyJEe-ddquNl4l79w" name="Employee_Gender" label="Employee_Gender" length="30" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQKAyJEe-ddquNl4l79w" name="Employee_Country" label="Employee_Country" length="30" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQIwyJEe-ddquNl4l79w" name="Employee_ID" label="Employee_ID" length="30" sourceType="VARCHAR" talendType="id_String" key="true"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJQyJEe-ddquNl4l79w" name="Employee_Job_Title" label="Employee_Job_Title" length="30" sourceType="VARCHAR" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJgyJEe-ddquNl4l79w" name="Employee_Salary" label="Employee_Salary" length="-1" sourceType="INT4" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQJwyJEe-ddquNl4l79w" name="Employee_Gender" label="Employee_Gender" length="30" sourceType="VARCHAR" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XmRQKAyJEe-ddquNl4l79w" name="Employee_Country" label="Employee_Country" length="30" sourceType="VARCHAR" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
