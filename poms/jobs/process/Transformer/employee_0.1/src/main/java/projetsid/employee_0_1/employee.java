@@ -1431,100 +1431,16 @@ public class employee implements TalendJob {
 		final static byte[] commonByteArrayLock_PROJETSID_employee = new byte[0];
 		static byte[] commonByteArray_PROJETSID_employee = new byte[0];
 
-		public String Order_ID;
+		public String Customer_Group_ID;
 
-		public String getOrder_ID() {
-			return this.Order_ID;
+		public String getCustomer_Group_ID() {
+			return this.Customer_Group_ID;
 		}
 
-		public String Order_Type;
+		public String Customer_Group;
 
-		public String getOrder_Type() {
-			return this.Order_Type;
-		}
-
-		public String Order_Date;
-
-		public String getOrder_Date() {
-			return this.Order_Date;
-		}
-
-		public String Delivery_Date;
-
-		public String getDelivery_Date() {
-			return this.Delivery_Date;
-		}
-
-		public String Order_Item_Num;
-
-		public String getOrder_Item_Num() {
-			return this.Order_Item_Num;
-		}
-
-		public Integer Quantity;
-
-		public Integer getQuantity() {
-			return this.Quantity;
-		}
-
-		public String Total_Retail_Price;
-
-		public String getTotal_Retail_Price() {
-			return this.Total_Retail_Price;
-		}
-
-		public String CostPrice_Per_Unit;
-
-		public String getCostPrice_Per_Unit() {
-			return this.CostPrice_Per_Unit;
-		}
-
-		public String Product_ID;
-
-		public String getProduct_ID() {
-			return this.Product_ID;
-		}
-
-		public String Product_Name;
-
-		public String getProduct_Name() {
-			return this.Product_Name;
-		}
-
-		public String Product_Level;
-
-		public String getProduct_Level() {
-			return this.Product_Level;
-		}
-
-		public String Product_Level_Name;
-
-		public String getProduct_Level_Name() {
-			return this.Product_Level_Name;
-		}
-
-		public String Product_Ref_ID;
-
-		public String getProduct_Ref_ID() {
-			return this.Product_Ref_ID;
-		}
-
-		public List Customer_ID;
-
-		public List getCustomer_ID() {
-			return this.Customer_ID;
-		}
-
-		public Character Gender;
-
-		public Character getGender() {
-			return this.Gender;
-		}
-
-		public String Birth_Date;
-
-		public String getBirth_Date() {
-			return this.Birth_Date;
+		public String getCustomer_Group() {
+			return this.Customer_Group;
 		}
 
 		public String Customer_Type_ID;
@@ -1539,16 +1455,34 @@ public class employee implements TalendJob {
 			return this.Customer_Type;
 		}
 
-		public String Customer_Group_ID;
+		public String Birth_Date;
 
-		public String getCustomer_Group_ID() {
-			return this.Customer_Group_ID;
+		public String getBirth_Date() {
+			return this.Birth_Date;
 		}
 
-		public String Customer_Group;
+		public Character Gender;
 
-		public String getCustomer_Group() {
-			return this.Customer_Group;
+		public Character getGender() {
+			return this.Gender;
+		}
+
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
+		public String Country;
+
+		public String getCountry() {
+			return this.Country;
+		}
+
+		public String Country_Name;
+
+		public String getCountry_Name() {
+			return this.Country_Name;
 		}
 
 		public String Employee_ID;
@@ -1575,52 +1509,76 @@ public class employee implements TalendJob {
 			return this.Employee_Gender;
 		}
 
-		public String Emp_Hire_Date;
-
-		public String getEmp_Hire_Date() {
-			return this.Emp_Hire_Date;
-		}
-
 		public String Employee_Country;
 
 		public String getEmployee_Country() {
 			return this.Employee_Country;
 		}
 
-		public String Employee_Org_Level;
+		public String Order_Type;
 
-		public String getEmployee_Org_Level() {
-			return this.Employee_Org_Level;
+		public String getOrder_Type() {
+			return this.Order_Type;
 		}
 
-		public String Org_Level_Name;
+		public String Order_Date;
 
-		public String getOrg_Level_Name() {
-			return this.Org_Level_Name;
+		public String getOrder_Date() {
+			return this.Order_Date;
 		}
 
-		public String Country;
+		public String Delivery_Date;
 
-		public String getCountry() {
-			return this.Country;
+		public String getDelivery_Date() {
+			return this.Delivery_Date;
 		}
 
-		public String Country_Name;
+		public String Product_ID;
 
-		public String getCountry_Name() {
-			return this.Country_Name;
+		public String getProduct_ID() {
+			return this.Product_ID;
 		}
 
-		public String Country_ID;
+		public String Product_Name;
 
-		public String getCountry_ID() {
-			return this.Country_ID;
+		public String getProduct_Name() {
+			return this.Product_Name;
 		}
 
-		public String Country_FormerName;
+		public String Product_Ref_ID;
 
-		public String getCountry_FormerName() {
-			return this.Country_FormerName;
+		public String getProduct_Ref_ID() {
+			return this.Product_Ref_ID;
+		}
+
+		public Integer Quantity;
+
+		public Integer getQuantity() {
+			return this.Quantity;
+		}
+
+		public String Order_ID;
+
+		public String getOrder_ID() {
+			return this.Order_ID;
+		}
+
+		public String Order_Item_Num;
+
+		public String getOrder_Item_Num() {
+			return this.Order_Item_Num;
+		}
+
+		public String CostPrice_Per_Unit;
+
+		public String getCostPrice_Per_Unit() {
+			return this.CostPrice_Per_Unit;
+		}
+
+		public String Total_Retail_Price;
+
+		public String getTotal_Retail_Price() {
+			return this.Total_Retail_Price;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -1733,33 +1691,15 @@ public class employee implements TalendJob {
 
 					int length = 0;
 
-					this.Order_ID = readString(dis);
+					this.Customer_Group_ID = readString(dis);
 
-					this.Order_Type = readString(dis);
+					this.Customer_Group = readString(dis);
 
-					this.Order_Date = readString(dis);
+					this.Customer_Type_ID = readString(dis);
 
-					this.Delivery_Date = readString(dis);
+					this.Customer_Type = readString(dis);
 
-					this.Order_Item_Num = readString(dis);
-
-					this.Quantity = readInteger(dis);
-
-					this.Total_Retail_Price = readString(dis);
-
-					this.CostPrice_Per_Unit = readString(dis);
-
-					this.Product_ID = readString(dis);
-
-					this.Product_Name = readString(dis);
-
-					this.Product_Level = readString(dis);
-
-					this.Product_Level_Name = readString(dis);
-
-					this.Product_Ref_ID = readString(dis);
-
-					this.Customer_ID = (List) dis.readObject();
+					this.Birth_Date = readString(dis);
 
 					length = dis.readByte();
 					if (length == -1) {
@@ -1768,15 +1708,11 @@ public class employee implements TalendJob {
 						this.Gender = dis.readChar();
 					}
 
-					this.Birth_Date = readString(dis);
+					this.Customer_ID = readString(dis);
 
-					this.Customer_Type_ID = readString(dis);
+					this.Country = readString(dis);
 
-					this.Customer_Type = readString(dis);
-
-					this.Customer_Group_ID = readString(dis);
-
-					this.Customer_Group = readString(dis);
+					this.Country_Name = readString(dis);
 
 					this.Employee_ID = readString(dis);
 
@@ -1786,27 +1722,32 @@ public class employee implements TalendJob {
 
 					this.Employee_Gender = readString(dis);
 
-					this.Emp_Hire_Date = readString(dis);
-
 					this.Employee_Country = readString(dis);
 
-					this.Employee_Org_Level = readString(dis);
+					this.Order_Type = readString(dis);
 
-					this.Org_Level_Name = readString(dis);
+					this.Order_Date = readString(dis);
 
-					this.Country = readString(dis);
+					this.Delivery_Date = readString(dis);
 
-					this.Country_Name = readString(dis);
+					this.Product_ID = readString(dis);
 
-					this.Country_ID = readString(dis);
+					this.Product_Name = readString(dis);
 
-					this.Country_FormerName = readString(dis);
+					this.Product_Ref_ID = readString(dis);
+
+					this.Quantity = readInteger(dis);
+
+					this.Order_ID = readString(dis);
+
+					this.Order_Item_Num = readString(dis);
+
+					this.CostPrice_Per_Unit = readString(dis);
+
+					this.Total_Retail_Price = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
-
-				} catch (ClassNotFoundException eCNFE) {
-					throw new RuntimeException(eCNFE);
 
 				}
 
@@ -1822,33 +1763,15 @@ public class employee implements TalendJob {
 
 					int length = 0;
 
-					this.Order_ID = readString(dis);
+					this.Customer_Group_ID = readString(dis);
 
-					this.Order_Type = readString(dis);
+					this.Customer_Group = readString(dis);
 
-					this.Order_Date = readString(dis);
+					this.Customer_Type_ID = readString(dis);
 
-					this.Delivery_Date = readString(dis);
+					this.Customer_Type = readString(dis);
 
-					this.Order_Item_Num = readString(dis);
-
-					this.Quantity = readInteger(dis);
-
-					this.Total_Retail_Price = readString(dis);
-
-					this.CostPrice_Per_Unit = readString(dis);
-
-					this.Product_ID = readString(dis);
-
-					this.Product_Name = readString(dis);
-
-					this.Product_Level = readString(dis);
-
-					this.Product_Level_Name = readString(dis);
-
-					this.Product_Ref_ID = readString(dis);
-
-					this.Customer_ID = (List) dis.readObject();
+					this.Birth_Date = readString(dis);
 
 					length = dis.readByte();
 					if (length == -1) {
@@ -1857,15 +1780,11 @@ public class employee implements TalendJob {
 						this.Gender = dis.readChar();
 					}
 
-					this.Birth_Date = readString(dis);
+					this.Customer_ID = readString(dis);
 
-					this.Customer_Type_ID = readString(dis);
+					this.Country = readString(dis);
 
-					this.Customer_Type = readString(dis);
-
-					this.Customer_Group_ID = readString(dis);
-
-					this.Customer_Group = readString(dis);
+					this.Country_Name = readString(dis);
 
 					this.Employee_ID = readString(dis);
 
@@ -1875,27 +1794,32 @@ public class employee implements TalendJob {
 
 					this.Employee_Gender = readString(dis);
 
-					this.Emp_Hire_Date = readString(dis);
-
 					this.Employee_Country = readString(dis);
 
-					this.Employee_Org_Level = readString(dis);
+					this.Order_Type = readString(dis);
 
-					this.Org_Level_Name = readString(dis);
+					this.Order_Date = readString(dis);
 
-					this.Country = readString(dis);
+					this.Delivery_Date = readString(dis);
 
-					this.Country_Name = readString(dis);
+					this.Product_ID = readString(dis);
 
-					this.Country_ID = readString(dis);
+					this.Product_Name = readString(dis);
 
-					this.Country_FormerName = readString(dis);
+					this.Product_Ref_ID = readString(dis);
+
+					this.Quantity = readInteger(dis);
+
+					this.Order_ID = readString(dis);
+
+					this.Order_Item_Num = readString(dis);
+
+					this.CostPrice_Per_Unit = readString(dis);
+
+					this.Total_Retail_Price = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
-
-				} catch (ClassNotFoundException eCNFE) {
-					throw new RuntimeException(eCNFE);
 
 				}
 
@@ -1908,59 +1832,23 @@ public class employee implements TalendJob {
 
 				// String
 
-				writeString(this.Order_ID, dos);
+				writeString(this.Customer_Group_ID, dos);
 
 				// String
 
-				writeString(this.Order_Type, dos);
+				writeString(this.Customer_Group, dos);
 
 				// String
 
-				writeString(this.Order_Date, dos);
+				writeString(this.Customer_Type_ID, dos);
 
 				// String
 
-				writeString(this.Delivery_Date, dos);
+				writeString(this.Customer_Type, dos);
 
 				// String
 
-				writeString(this.Order_Item_Num, dos);
-
-				// Integer
-
-				writeInteger(this.Quantity, dos);
-
-				// String
-
-				writeString(this.Total_Retail_Price, dos);
-
-				// String
-
-				writeString(this.CostPrice_Per_Unit, dos);
-
-				// String
-
-				writeString(this.Product_ID, dos);
-
-				// String
-
-				writeString(this.Product_Name, dos);
-
-				// String
-
-				writeString(this.Product_Level, dos);
-
-				// String
-
-				writeString(this.Product_Level_Name, dos);
-
-				// String
-
-				writeString(this.Product_Ref_ID, dos);
-
-				// List
-
-				dos.writeObject(this.Customer_ID);
+				writeString(this.Birth_Date, dos);
 
 				// Character
 
@@ -1973,23 +1861,15 @@ public class employee implements TalendJob {
 
 				// String
 
-				writeString(this.Birth_Date, dos);
+				writeString(this.Customer_ID, dos);
 
 				// String
 
-				writeString(this.Customer_Type_ID, dos);
+				writeString(this.Country, dos);
 
 				// String
 
-				writeString(this.Customer_Type, dos);
-
-				// String
-
-				writeString(this.Customer_Group_ID, dos);
-
-				// String
-
-				writeString(this.Customer_Group, dos);
+				writeString(this.Country_Name, dos);
 
 				// String
 
@@ -2009,35 +1889,51 @@ public class employee implements TalendJob {
 
 				// String
 
-				writeString(this.Emp_Hire_Date, dos);
-
-				// String
-
 				writeString(this.Employee_Country, dos);
 
 				// String
 
-				writeString(this.Employee_Org_Level, dos);
+				writeString(this.Order_Type, dos);
 
 				// String
 
-				writeString(this.Org_Level_Name, dos);
+				writeString(this.Order_Date, dos);
 
 				// String
 
-				writeString(this.Country, dos);
+				writeString(this.Delivery_Date, dos);
 
 				// String
 
-				writeString(this.Country_Name, dos);
+				writeString(this.Product_ID, dos);
 
 				// String
 
-				writeString(this.Country_ID, dos);
+				writeString(this.Product_Name, dos);
 
 				// String
 
-				writeString(this.Country_FormerName, dos);
+				writeString(this.Product_Ref_ID, dos);
+
+				// Integer
+
+				writeInteger(this.Quantity, dos);
+
+				// String
+
+				writeString(this.Order_ID, dos);
+
+				// String
+
+				writeString(this.Order_Item_Num, dos);
+
+				// String
+
+				writeString(this.CostPrice_Per_Unit, dos);
+
+				// String
+
+				writeString(this.Total_Retail_Price, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -2050,59 +1946,23 @@ public class employee implements TalendJob {
 
 				// String
 
-				writeString(this.Order_ID, dos);
+				writeString(this.Customer_Group_ID, dos);
 
 				// String
 
-				writeString(this.Order_Type, dos);
+				writeString(this.Customer_Group, dos);
 
 				// String
 
-				writeString(this.Order_Date, dos);
+				writeString(this.Customer_Type_ID, dos);
 
 				// String
 
-				writeString(this.Delivery_Date, dos);
+				writeString(this.Customer_Type, dos);
 
 				// String
 
-				writeString(this.Order_Item_Num, dos);
-
-				// Integer
-
-				writeInteger(this.Quantity, dos);
-
-				// String
-
-				writeString(this.Total_Retail_Price, dos);
-
-				// String
-
-				writeString(this.CostPrice_Per_Unit, dos);
-
-				// String
-
-				writeString(this.Product_ID, dos);
-
-				// String
-
-				writeString(this.Product_Name, dos);
-
-				// String
-
-				writeString(this.Product_Level, dos);
-
-				// String
-
-				writeString(this.Product_Level_Name, dos);
-
-				// String
-
-				writeString(this.Product_Ref_ID, dos);
-
-				// List
-
-				dos.writeObject(this.Customer_ID);
+				writeString(this.Birth_Date, dos);
 
 				// Character
 
@@ -2115,23 +1975,15 @@ public class employee implements TalendJob {
 
 				// String
 
-				writeString(this.Birth_Date, dos);
+				writeString(this.Customer_ID, dos);
 
 				// String
 
-				writeString(this.Customer_Type_ID, dos);
+				writeString(this.Country, dos);
 
 				// String
 
-				writeString(this.Customer_Type, dos);
-
-				// String
-
-				writeString(this.Customer_Group_ID, dos);
-
-				// String
-
-				writeString(this.Customer_Group, dos);
+				writeString(this.Country_Name, dos);
 
 				// String
 
@@ -2151,35 +2003,51 @@ public class employee implements TalendJob {
 
 				// String
 
-				writeString(this.Emp_Hire_Date, dos);
-
-				// String
-
 				writeString(this.Employee_Country, dos);
 
 				// String
 
-				writeString(this.Employee_Org_Level, dos);
+				writeString(this.Order_Type, dos);
 
 				// String
 
-				writeString(this.Org_Level_Name, dos);
+				writeString(this.Order_Date, dos);
 
 				// String
 
-				writeString(this.Country, dos);
+				writeString(this.Delivery_Date, dos);
 
 				// String
 
-				writeString(this.Country_Name, dos);
+				writeString(this.Product_ID, dos);
 
 				// String
 
-				writeString(this.Country_ID, dos);
+				writeString(this.Product_Name, dos);
 
 				// String
 
-				writeString(this.Country_FormerName, dos);
+				writeString(this.Product_Ref_ID, dos);
+
+				// Integer
+
+				writeInteger(this.Quantity, dos);
+
+				// String
+
+				writeString(this.Order_ID, dos);
+
+				// String
+
+				writeString(this.Order_Item_Num, dos);
+
+				// String
+
+				writeString(this.CostPrice_Per_Unit, dos);
+
+				// String
+
+				writeString(this.Total_Retail_Price, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -2192,38 +2060,31 @@ public class employee implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("Order_ID=" + Order_ID);
-			sb.append(",Order_Type=" + Order_Type);
-			sb.append(",Order_Date=" + Order_Date);
-			sb.append(",Delivery_Date=" + Delivery_Date);
-			sb.append(",Order_Item_Num=" + Order_Item_Num);
-			sb.append(",Quantity=" + String.valueOf(Quantity));
-			sb.append(",Total_Retail_Price=" + Total_Retail_Price);
-			sb.append(",CostPrice_Per_Unit=" + CostPrice_Per_Unit);
-			sb.append(",Product_ID=" + Product_ID);
-			sb.append(",Product_Name=" + Product_Name);
-			sb.append(",Product_Level=" + Product_Level);
-			sb.append(",Product_Level_Name=" + Product_Level_Name);
-			sb.append(",Product_Ref_ID=" + Product_Ref_ID);
-			sb.append(",Customer_ID=" + String.valueOf(Customer_ID));
-			sb.append(",Gender=" + String.valueOf(Gender));
-			sb.append(",Birth_Date=" + Birth_Date);
+			sb.append("Customer_Group_ID=" + Customer_Group_ID);
+			sb.append(",Customer_Group=" + Customer_Group);
 			sb.append(",Customer_Type_ID=" + Customer_Type_ID);
 			sb.append(",Customer_Type=" + Customer_Type);
-			sb.append(",Customer_Group_ID=" + Customer_Group_ID);
-			sb.append(",Customer_Group=" + Customer_Group);
+			sb.append(",Birth_Date=" + Birth_Date);
+			sb.append(",Gender=" + String.valueOf(Gender));
+			sb.append(",Customer_ID=" + Customer_ID);
+			sb.append(",Country=" + Country);
+			sb.append(",Country_Name=" + Country_Name);
 			sb.append(",Employee_ID=" + Employee_ID);
 			sb.append(",Employee_Job_Title=" + Employee_Job_Title);
 			sb.append(",Employee_Salary=" + String.valueOf(Employee_Salary));
 			sb.append(",Employee_Gender=" + Employee_Gender);
-			sb.append(",Emp_Hire_Date=" + Emp_Hire_Date);
 			sb.append(",Employee_Country=" + Employee_Country);
-			sb.append(",Employee_Org_Level=" + Employee_Org_Level);
-			sb.append(",Org_Level_Name=" + Org_Level_Name);
-			sb.append(",Country=" + Country);
-			sb.append(",Country_Name=" + Country_Name);
-			sb.append(",Country_ID=" + Country_ID);
-			sb.append(",Country_FormerName=" + Country_FormerName);
+			sb.append(",Order_Type=" + Order_Type);
+			sb.append(",Order_Date=" + Order_Date);
+			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Product_ID=" + Product_ID);
+			sb.append(",Product_Name=" + Product_Name);
+			sb.append(",Product_Ref_ID=" + Product_Ref_ID);
+			sb.append(",Quantity=" + String.valueOf(Quantity));
+			sb.append(",Order_ID=" + Order_ID);
+			sb.append(",Order_Item_Num=" + Order_Item_Num);
+			sb.append(",CostPrice_Per_Unit=" + CostPrice_Per_Unit);
+			sb.append(",Total_Retail_Price=" + Total_Retail_Price);
 			sb.append("]");
 
 			return sb.toString();
@@ -2697,45 +2558,23 @@ public class employee implements TalendJob {
 																														// is
 																														// '\n'
 
-								row5.Order_ID = null;
+								row5.Customer_Group_ID = null;
 
-								row5.Order_Type = null;
-
-								row5.Order_Date = null;
-
-								row5.Delivery_Date = null;
-
-								row5.Order_Item_Num = null;
-
-								row5.Quantity = null;
-
-								row5.Total_Retail_Price = null;
-
-								row5.CostPrice_Per_Unit = null;
-
-								row5.Product_ID = null;
-
-								row5.Product_Name = null;
-
-								row5.Product_Level = null;
-
-								row5.Product_Level_Name = null;
-
-								row5.Product_Ref_ID = null;
-
-								row5.Customer_ID = null;
-
-								row5.Gender = null;
-
-								row5.Birth_Date = null;
+								row5.Customer_Group = null;
 
 								row5.Customer_Type_ID = null;
 
 								row5.Customer_Type = null;
 
-								row5.Customer_Group_ID = null;
+								row5.Birth_Date = null;
 
-								row5.Customer_Group = null;
+								row5.Gender = null;
+
+								row5.Customer_ID = null;
+
+								row5.Country = null;
+
+								row5.Country_Name = null;
 
 								row5.Employee_ID = null;
 
@@ -2745,21 +2584,29 @@ public class employee implements TalendJob {
 
 								row5.Employee_Gender = null;
 
-								row5.Emp_Hire_Date = null;
-
 								row5.Employee_Country = null;
 
-								row5.Employee_Org_Level = null;
+								row5.Order_Type = null;
 
-								row5.Org_Level_Name = null;
+								row5.Order_Date = null;
 
-								row5.Country = null;
+								row5.Delivery_Date = null;
 
-								row5.Country_Name = null;
+								row5.Product_ID = null;
 
-								row5.Country_ID = null;
+								row5.Product_Name = null;
 
-								row5.Country_FormerName = null;
+								row5.Product_Ref_ID = null;
+
+								row5.Quantity = null;
+
+								row5.Order_ID = null;
+
+								row5.Order_Item_Num = null;
+
+								row5.CostPrice_Per_Unit = null;
+
+								row5.Total_Retail_Price = null;
 
 							} else {
 
@@ -2769,11 +2616,11 @@ public class employee implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Order_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Customer_Group_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Order_ID = null;
+									row5.Customer_Group_ID = null;
 
 								}
 
@@ -2781,11 +2628,11 @@ public class employee implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Order_Type = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Customer_Group = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Order_Type = null;
+									row5.Customer_Group = null;
 
 								}
 
@@ -2793,11 +2640,11 @@ public class employee implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Order_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Customer_Type_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Order_Date = null;
+									row5.Customer_Type_ID = null;
 
 								}
 
@@ -2805,11 +2652,11 @@ public class employee implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Delivery_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Customer_Type = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Delivery_Date = null;
+									row5.Customer_Type = null;
 
 								}
 
@@ -2817,164 +2664,15 @@ public class employee implements TalendJob {
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Order_Item_Num = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Birth_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Order_Item_Num = null;
+									row5.Birth_Date = null;
 
 								}
 
 								columnIndexWithD_tFileInputDelimited_1 = 5;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row5.Quantity = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Quantity", "row5",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row5.Quantity = null;
-
-									}
-
-								} else {
-
-									row5.Quantity = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 6;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Total_Retail_Price = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Total_Retail_Price = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 7;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.CostPrice_Per_Unit = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.CostPrice_Per_Unit = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 8;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Product_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Product_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 9;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Product_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Product_Name = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 10;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Product_Level = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Product_Level = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 11;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Product_Level_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Product_Level_Name = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 12;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Product_Ref_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Product_Ref_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 13;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row5.Customer_ID = ParserUtils.parseTo_List(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-													String.valueOf(fieldSeparator_tFileInputDelimited_1_ListType[0]));
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Customer_ID", "row5",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row5.Customer_ID = null;
-
-									}
-
-								} else {
-
-									row5.Customer_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 14;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -3006,67 +2704,43 @@ public class employee implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 15;
+								columnIndexWithD_tFileInputDelimited_1 = 6;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Birth_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Customer_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Birth_Date = null;
+									row5.Customer_ID = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 16;
+								columnIndexWithD_tFileInputDelimited_1 = 7;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Customer_Type_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Country = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Customer_Type_ID = null;
+									row5.Country = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 17;
+								columnIndexWithD_tFileInputDelimited_1 = 8;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Customer_Type = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Country_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Customer_Type = null;
+									row5.Country_Name = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 18;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Customer_Group_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Customer_Group_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 19;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Customer_Group = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Customer_Group = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 20;
+								columnIndexWithD_tFileInputDelimited_1 = 9;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -3078,7 +2752,7 @@ public class employee implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 21;
+								columnIndexWithD_tFileInputDelimited_1 = 10;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -3090,7 +2764,7 @@ public class employee implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 22;
+								columnIndexWithD_tFileInputDelimited_1 = 11;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -3122,7 +2796,7 @@ public class employee implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 23;
+								columnIndexWithD_tFileInputDelimited_1 = 12;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -3134,19 +2808,7 @@ public class employee implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 24;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row5.Emp_Hire_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row5.Emp_Hire_Date = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 25;
+								columnIndexWithD_tFileInputDelimited_1 = 13;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
@@ -3158,75 +2820,155 @@ public class employee implements TalendJob {
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 26;
+								columnIndexWithD_tFileInputDelimited_1 = 14;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Employee_Org_Level = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Order_Type = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Employee_Org_Level = null;
+									row5.Order_Type = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 27;
+								columnIndexWithD_tFileInputDelimited_1 = 15;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Org_Level_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Order_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Org_Level_Name = null;
+									row5.Order_Date = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 28;
+								columnIndexWithD_tFileInputDelimited_1 = 16;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Country = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Delivery_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Country = null;
+									row5.Delivery_Date = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 29;
+								columnIndexWithD_tFileInputDelimited_1 = 17;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Country_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Product_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Country_Name = null;
+									row5.Product_ID = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 30;
+								columnIndexWithD_tFileInputDelimited_1 = 18;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Country_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Product_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Country_ID = null;
+									row5.Product_Name = null;
 
 								}
 
-								columnIndexWithD_tFileInputDelimited_1 = 31;
+								columnIndexWithD_tFileInputDelimited_1 = 19;
 
 								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
 
-									row5.Country_FormerName = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+									row5.Product_Ref_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
 
 								} else {
 
-									row5.Country_FormerName = null;
+									row5.Product_Ref_ID = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 20;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
+									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
+										try {
+
+											row5.Quantity = ParserUtils.parseTo_Integer(
+													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
+
+										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
+											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
+													ex_tFileInputDelimited_1.getMessage());
+											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
+													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"Quantity", "row5",
+															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
+															ex_tFileInputDelimited_1),
+													ex_tFileInputDelimited_1));
+										}
+									} else {
+
+										row5.Quantity = null;
+
+									}
+
+								} else {
+
+									row5.Quantity = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 21;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
+									row5.Order_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+
+								} else {
+
+									row5.Order_ID = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 22;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
+									row5.Order_Item_Num = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+
+								} else {
+
+									row5.Order_Item_Num = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 23;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
+									row5.CostPrice_Per_Unit = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+
+								} else {
+
+									row5.CostPrice_Per_Unit = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_1 = 24;
+
+								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
+
+									row5.Total_Retail_Price = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
+
+								} else {
+
+									row5.Total_Retail_Price = null;
 
 								}
 
@@ -3797,7 +3539,7 @@ public class employee implements TalendJob {
 	public int portTraces = 4334;
 	public String clientHost;
 	public String defaultClientHost = "localhost";
-	public String contextStr = "alice";
+	public String contextStr = "jordan";
 	public boolean isDefaultContext = true;
 	public String pid = "0";
 	public String rootPid = null;
@@ -4161,6 +3903,6 @@ public class employee implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 118873 characters generated by Talend Open Studio for Data Integration on the
- * 8 mai 2024 à 19:13:00 CEST
+ * 111663 characters generated by Talend Open Studio for Data Integration on the
+ * 9 mai 2024 à 17:48:12 CEST
  ************************************************************************************************/

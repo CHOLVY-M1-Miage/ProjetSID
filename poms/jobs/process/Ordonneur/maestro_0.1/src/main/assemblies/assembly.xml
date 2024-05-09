@@ -274,10 +274,10 @@
         <dependencySet>
             <outputDirectory>${talend.job.name}</outputDirectory>
             <includes>
-                <include>org.example.projetsid.job:pays:jar:0.1.0</include>
                 <include>org.example.projetsid.job:colonnesSelecteur:jar:0.1.0</include>
+                <include>org.example.projetsid.job:country:jar:0.1.0</include>
                 <include>org.example.projetsid.job:maestro:jar:0.1.0</include>
-                <include>org.example.projetsid.job:dumpPays:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpCountry:jar:0.1.0</include>
             </includes>
             <outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>true</useProjectArtifact>

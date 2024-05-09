@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_Te6JUQ4iEe-HZfgavK5q_A" name="repository.metadataGenericSchema" dataPackage="_Te6JUg4iEe-HZfgavK5q_A"/>
+  <TalendMetadata:GenericPackage xmi:id="_Te6JUg4iEe-HZfgavK5q_A" name="repository.metadataGenericSchema" dataManager="_Te6JUQ4iEe-HZfgavK5q_A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Te6JUw4iEe-HZfgavK5q_A" id="_F2pj4A4iEe-HZfgavK5q_A" label="OrderLine">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVA4iEe-HZfgavK5q_A" name="Order_ID" label="Order_ID" length="20" talendType="id_String" key="true"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVQ4iEe-HZfgavK5q_A" name="Order_Item_Num" label="Order_Item_Num" length="20" talendType="id_Integer" key="true"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVg4iEe-HZfgavK5q_A" name="Total_Retail_Price" label="Total_Retail_Price" length="20" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVw4iEe-HZfgavK5q_A" name="CostPrice_Per_Unit" label="CostPrice_Per_Unit" length="20" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JWA4iEe-HZfgavK5q_A" name="Quantity" label="Quantity" length="20" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JWQ4iEe-HZfgavK5q_A" name="Product_ID" label="Product_ID" length="20" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_iJFJoQ4gEe-HZfgavK5q_A" name="repository.metadataGenericSchema" dataPackage="_iJFwsA4gEe-HZfgavK5q_A"/>
+  <TalendMetadata:GenericPackage xmi:id="_iJFwsA4gEe-HZfgavK5q_A" name="repository.metadataGenericSchema" dataManager="_iJFJoQ4gEe-HZfgavK5q_A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_iJFwsQ4gEe-HZfgavK5q_A" id="_Q4LpkA4gEe-HZfgavK5q_A" label="Customer">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwsg4gEe-HZfgavK5q_A" name="Customer_ID" label="Customer_ID" length="20" talendType="id_String" key="true"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwsw4gEe-HZfgavK5q_A" name="Gender" label="Gender" length="-1" talendType="id_Character"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwtA4gEe-HZfgavK5q_A" name="Birth_Years" label="Birth_Years" length="-1" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwtQ4gEe-HZfgavK5q_A" name="Customer_Type_ID" label="Customer_Type_ID" length="20" talendType="id_String"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

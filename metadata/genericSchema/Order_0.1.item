@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="__YqMwA4hEe-HZfgavK5q_A" name="repository.metadataGenericSchema" dataPackage="__YqMwQ4hEe-HZfgavK5q_A"/>
+  <TalendMetadata:GenericPackage xmi:id="__YqMwQ4hEe-HZfgavK5q_A" name="repository.metadataGenericSchema" dataManager="__YqMwA4hEe-HZfgavK5q_A">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="__YqMwg4hEe-HZfgavK5q_A" id="_vo36IA4hEe-HZfgavK5q_A" label="Order">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__YqMww4hEe-HZfgavK5q_A" name="Order_ID" label="Order_ID" length="20" talendType="id_String" key="true"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__YqMxA4hEe-HZfgavK5q_A" name="Order_Type" label="Order_Type" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__YqMxQ4hEe-HZfgavK5q_A" name="Order_Date" label="Order_Date" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__YqMxg4hEe-HZfgavK5q_A" name="Delivery_Date" label="Delivery_Date" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__YqMxw4hEe-HZfgavK5q_A" name="Country" label="Country" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__YqMyA4hEe-HZfgavK5q_A" name="Total_Retail_Price" label="Total_Retail_Price" length="-1" talendType="id_Float"/>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

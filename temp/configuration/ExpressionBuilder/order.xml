@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="Float.parseFloat(row3.Total_Retail_Price.replaceAll(&quot;,&quot;, &quot;.&quot;))">
+  <variables name="row3.Order_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Order_Type" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Order_Date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Delivery_Date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Country" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.Total_Retail_Price" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.dateDayWeekName" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.monthId" value="null" talendType="id_String" nullable="true"/>
+  <variables name="TalendDate.parseDate(&quot;yyyy/MM/dd&quot;, row3.Order_Date.split(&quot; &quot;)[5] + &quot;/&quot; + fonctionsPerso.getMonthNumber(row3.Order_Date.split(&quot; &quot;)[1]) + &quot;/&quot; + row3.Order_Date.split(&quot; &quot;)[2]); " value="null" talendType="id_String"/>
+  <variables name="TalendDate.parseDate(&quot;yyyy/MM/dd&quot;, row3.Delivery_Date.split(&quot; &quot;)[5] + &quot;/&quot; + fonctionsPerso.getMonthNumber(row3.Delivery_Date.split(&quot; &quot;)[1]) + &quot;/&quot; + row3.Delivery_Date.split(&quot; &quot;)[2]); " value="null" talendType="id_Date"/>
+  <variables name="" value="0" talendType="id_Float"/>
+</expression:EMFExpression>

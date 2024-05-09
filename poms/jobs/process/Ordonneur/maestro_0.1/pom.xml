@@ -126,18 +126,108 @@
     </dependency>
     <dependency>
       <groupId>org.example.projetsid.job</groupId>
-      <artifactId>dumpPays</artifactId>
+      <artifactId>dumpEmployee</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.projetsid.job</groupId>
-      <artifactId>pays</artifactId>
+      <artifactId>dumpCustomerType</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>customer_type</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpCountry</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>employee</artifactId>
       <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>org.example.projetsid.job</groupId>
       <artifactId>colonnesSelecteur</artifactId>
       <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpDate</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>order</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpCustomerGroup</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpCustomer</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>customer</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpQuarter</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpOrder</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>time</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>customer_group</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>country</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>orderLine</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpProduct</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>product</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpMonth</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example.projetsid.job</groupId>
+      <artifactId>dumpOrderLine</artifactId>
+      <version>0.2.0</version>
     </dependency>
   </dependencies>
   <build>

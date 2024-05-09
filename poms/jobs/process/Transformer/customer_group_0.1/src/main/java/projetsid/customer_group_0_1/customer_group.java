@@ -1125,100 +1125,16 @@ public class customer_group implements TalendJob {
 		final static byte[] commonByteArrayLock_PROJETSID_customer_group = new byte[0];
 		static byte[] commonByteArray_PROJETSID_customer_group = new byte[0];
 
-		public String Order_ID;
+		public String Customer_Group_ID;
 
-		public String getOrder_ID() {
-			return this.Order_ID;
+		public String getCustomer_Group_ID() {
+			return this.Customer_Group_ID;
 		}
 
-		public String Order_Type;
+		public String Customer_Group;
 
-		public String getOrder_Type() {
-			return this.Order_Type;
-		}
-
-		public String Order_Date;
-
-		public String getOrder_Date() {
-			return this.Order_Date;
-		}
-
-		public String Delivery_Date;
-
-		public String getDelivery_Date() {
-			return this.Delivery_Date;
-		}
-
-		public String Order_Item_Num;
-
-		public String getOrder_Item_Num() {
-			return this.Order_Item_Num;
-		}
-
-		public Integer Quantity;
-
-		public Integer getQuantity() {
-			return this.Quantity;
-		}
-
-		public String Total_Retail_Price;
-
-		public String getTotal_Retail_Price() {
-			return this.Total_Retail_Price;
-		}
-
-		public String CostPrice_Per_Unit;
-
-		public String getCostPrice_Per_Unit() {
-			return this.CostPrice_Per_Unit;
-		}
-
-		public String Product_ID;
-
-		public String getProduct_ID() {
-			return this.Product_ID;
-		}
-
-		public String Product_Name;
-
-		public String getProduct_Name() {
-			return this.Product_Name;
-		}
-
-		public String Product_Level;
-
-		public String getProduct_Level() {
-			return this.Product_Level;
-		}
-
-		public String Product_Level_Name;
-
-		public String getProduct_Level_Name() {
-			return this.Product_Level_Name;
-		}
-
-		public String Product_Ref_ID;
-
-		public String getProduct_Ref_ID() {
-			return this.Product_Ref_ID;
-		}
-
-		public List Customer_ID;
-
-		public List getCustomer_ID() {
-			return this.Customer_ID;
-		}
-
-		public Character Gender;
-
-		public Character getGender() {
-			return this.Gender;
-		}
-
-		public String Birth_Date;
-
-		public String getBirth_Date() {
-			return this.Birth_Date;
+		public String getCustomer_Group() {
+			return this.Customer_Group;
 		}
 
 		public String Customer_Type_ID;
@@ -1233,16 +1149,34 @@ public class customer_group implements TalendJob {
 			return this.Customer_Type;
 		}
 
-		public String Customer_Group_ID;
+		public String Birth_Date;
 
-		public String getCustomer_Group_ID() {
-			return this.Customer_Group_ID;
+		public String getBirth_Date() {
+			return this.Birth_Date;
 		}
 
-		public String Customer_Group;
+		public Character Gender;
 
-		public String getCustomer_Group() {
-			return this.Customer_Group;
+		public Character getGender() {
+			return this.Gender;
+		}
+
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
+		public String Country;
+
+		public String getCountry() {
+			return this.Country;
+		}
+
+		public String Country_Name;
+
+		public String getCountry_Name() {
+			return this.Country_Name;
 		}
 
 		public String Employee_ID;
@@ -1263,46 +1197,82 @@ public class customer_group implements TalendJob {
 			return this.Employee_Salary;
 		}
 
+		public String Employee_Gender;
+
+		public String getEmployee_Gender() {
+			return this.Employee_Gender;
+		}
+
 		public String Employee_Country;
 
 		public String getEmployee_Country() {
 			return this.Employee_Country;
 		}
 
-		public String Employee_Org_Level;
+		public String Order_Type;
 
-		public String getEmployee_Org_Level() {
-			return this.Employee_Org_Level;
+		public String getOrder_Type() {
+			return this.Order_Type;
 		}
 
-		public String Org_Level_Name;
+		public String Order_Date;
 
-		public String getOrg_Level_Name() {
-			return this.Org_Level_Name;
+		public String getOrder_Date() {
+			return this.Order_Date;
 		}
 
-		public String Country;
+		public String Delivery_Date;
 
-		public String getCountry() {
-			return this.Country;
+		public String getDelivery_Date() {
+			return this.Delivery_Date;
 		}
 
-		public String Country_Name;
+		public String Product_ID;
 
-		public String getCountry_Name() {
-			return this.Country_Name;
+		public String getProduct_ID() {
+			return this.Product_ID;
 		}
 
-		public String Country_ID;
+		public String Product_Name;
 
-		public String getCountry_ID() {
-			return this.Country_ID;
+		public String getProduct_Name() {
+			return this.Product_Name;
 		}
 
-		public String Country_FormerName;
+		public String Product_Ref_ID;
 
-		public String getCountry_FormerName() {
-			return this.Country_FormerName;
+		public String getProduct_Ref_ID() {
+			return this.Product_Ref_ID;
+		}
+
+		public Integer Quantity;
+
+		public Integer getQuantity() {
+			return this.Quantity;
+		}
+
+		public String Order_ID;
+
+		public String getOrder_ID() {
+			return this.Order_ID;
+		}
+
+		public String Order_Item_Num;
+
+		public String getOrder_Item_Num() {
+			return this.Order_Item_Num;
+		}
+
+		public String CostPrice_Per_Unit;
+
+		public String getCostPrice_Per_Unit() {
+			return this.CostPrice_Per_Unit;
+		}
+
+		public String Total_Retail_Price;
+
+		public String getTotal_Retail_Price() {
+			return this.Total_Retail_Price;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -1415,33 +1385,15 @@ public class customer_group implements TalendJob {
 
 					int length = 0;
 
-					this.Order_ID = readString(dis);
+					this.Customer_Group_ID = readString(dis);
 
-					this.Order_Type = readString(dis);
+					this.Customer_Group = readString(dis);
 
-					this.Order_Date = readString(dis);
+					this.Customer_Type_ID = readString(dis);
 
-					this.Delivery_Date = readString(dis);
+					this.Customer_Type = readString(dis);
 
-					this.Order_Item_Num = readString(dis);
-
-					this.Quantity = readInteger(dis);
-
-					this.Total_Retail_Price = readString(dis);
-
-					this.CostPrice_Per_Unit = readString(dis);
-
-					this.Product_ID = readString(dis);
-
-					this.Product_Name = readString(dis);
-
-					this.Product_Level = readString(dis);
-
-					this.Product_Level_Name = readString(dis);
-
-					this.Product_Ref_ID = readString(dis);
-
-					this.Customer_ID = (List) dis.readObject();
+					this.Birth_Date = readString(dis);
 
 					length = dis.readByte();
 					if (length == -1) {
@@ -1450,15 +1402,11 @@ public class customer_group implements TalendJob {
 						this.Gender = dis.readChar();
 					}
 
-					this.Birth_Date = readString(dis);
+					this.Customer_ID = readString(dis);
 
-					this.Customer_Type_ID = readString(dis);
+					this.Country = readString(dis);
 
-					this.Customer_Type = readString(dis);
-
-					this.Customer_Group_ID = readString(dis);
-
-					this.Customer_Group = readString(dis);
+					this.Country_Name = readString(dis);
 
 					this.Employee_ID = readString(dis);
 
@@ -1466,25 +1414,34 @@ public class customer_group implements TalendJob {
 
 					this.Employee_Salary = readInteger(dis);
 
+					this.Employee_Gender = readString(dis);
+
 					this.Employee_Country = readString(dis);
 
-					this.Employee_Org_Level = readString(dis);
+					this.Order_Type = readString(dis);
 
-					this.Org_Level_Name = readString(dis);
+					this.Order_Date = readString(dis);
 
-					this.Country = readString(dis);
+					this.Delivery_Date = readString(dis);
 
-					this.Country_Name = readString(dis);
+					this.Product_ID = readString(dis);
 
-					this.Country_ID = readString(dis);
+					this.Product_Name = readString(dis);
 
-					this.Country_FormerName = readString(dis);
+					this.Product_Ref_ID = readString(dis);
+
+					this.Quantity = readInteger(dis);
+
+					this.Order_ID = readString(dis);
+
+					this.Order_Item_Num = readString(dis);
+
+					this.CostPrice_Per_Unit = readString(dis);
+
+					this.Total_Retail_Price = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
-
-				} catch (ClassNotFoundException eCNFE) {
-					throw new RuntimeException(eCNFE);
 
 				}
 
@@ -1500,33 +1457,15 @@ public class customer_group implements TalendJob {
 
 					int length = 0;
 
-					this.Order_ID = readString(dis);
+					this.Customer_Group_ID = readString(dis);
 
-					this.Order_Type = readString(dis);
+					this.Customer_Group = readString(dis);
 
-					this.Order_Date = readString(dis);
+					this.Customer_Type_ID = readString(dis);
 
-					this.Delivery_Date = readString(dis);
+					this.Customer_Type = readString(dis);
 
-					this.Order_Item_Num = readString(dis);
-
-					this.Quantity = readInteger(dis);
-
-					this.Total_Retail_Price = readString(dis);
-
-					this.CostPrice_Per_Unit = readString(dis);
-
-					this.Product_ID = readString(dis);
-
-					this.Product_Name = readString(dis);
-
-					this.Product_Level = readString(dis);
-
-					this.Product_Level_Name = readString(dis);
-
-					this.Product_Ref_ID = readString(dis);
-
-					this.Customer_ID = (List) dis.readObject();
+					this.Birth_Date = readString(dis);
 
 					length = dis.readByte();
 					if (length == -1) {
@@ -1535,15 +1474,11 @@ public class customer_group implements TalendJob {
 						this.Gender = dis.readChar();
 					}
 
-					this.Birth_Date = readString(dis);
+					this.Customer_ID = readString(dis);
 
-					this.Customer_Type_ID = readString(dis);
+					this.Country = readString(dis);
 
-					this.Customer_Type = readString(dis);
-
-					this.Customer_Group_ID = readString(dis);
-
-					this.Customer_Group = readString(dis);
+					this.Country_Name = readString(dis);
 
 					this.Employee_ID = readString(dis);
 
@@ -1551,25 +1486,34 @@ public class customer_group implements TalendJob {
 
 					this.Employee_Salary = readInteger(dis);
 
+					this.Employee_Gender = readString(dis);
+
 					this.Employee_Country = readString(dis);
 
-					this.Employee_Org_Level = readString(dis);
+					this.Order_Type = readString(dis);
 
-					this.Org_Level_Name = readString(dis);
+					this.Order_Date = readString(dis);
 
-					this.Country = readString(dis);
+					this.Delivery_Date = readString(dis);
 
-					this.Country_Name = readString(dis);
+					this.Product_ID = readString(dis);
 
-					this.Country_ID = readString(dis);
+					this.Product_Name = readString(dis);
 
-					this.Country_FormerName = readString(dis);
+					this.Product_Ref_ID = readString(dis);
+
+					this.Quantity = readInteger(dis);
+
+					this.Order_ID = readString(dis);
+
+					this.Order_Item_Num = readString(dis);
+
+					this.CostPrice_Per_Unit = readString(dis);
+
+					this.Total_Retail_Price = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
-
-				} catch (ClassNotFoundException eCNFE) {
-					throw new RuntimeException(eCNFE);
 
 				}
 
@@ -1582,59 +1526,23 @@ public class customer_group implements TalendJob {
 
 				// String
 
-				writeString(this.Order_ID, dos);
+				writeString(this.Customer_Group_ID, dos);
 
 				// String
 
-				writeString(this.Order_Type, dos);
+				writeString(this.Customer_Group, dos);
 
 				// String
 
-				writeString(this.Order_Date, dos);
+				writeString(this.Customer_Type_ID, dos);
 
 				// String
 
-				writeString(this.Delivery_Date, dos);
+				writeString(this.Customer_Type, dos);
 
 				// String
 
-				writeString(this.Order_Item_Num, dos);
-
-				// Integer
-
-				writeInteger(this.Quantity, dos);
-
-				// String
-
-				writeString(this.Total_Retail_Price, dos);
-
-				// String
-
-				writeString(this.CostPrice_Per_Unit, dos);
-
-				// String
-
-				writeString(this.Product_ID, dos);
-
-				// String
-
-				writeString(this.Product_Name, dos);
-
-				// String
-
-				writeString(this.Product_Level, dos);
-
-				// String
-
-				writeString(this.Product_Level_Name, dos);
-
-				// String
-
-				writeString(this.Product_Ref_ID, dos);
-
-				// List
-
-				dos.writeObject(this.Customer_ID);
+				writeString(this.Birth_Date, dos);
 
 				// Character
 
@@ -1647,23 +1555,15 @@ public class customer_group implements TalendJob {
 
 				// String
 
-				writeString(this.Birth_Date, dos);
+				writeString(this.Customer_ID, dos);
 
 				// String
 
-				writeString(this.Customer_Type_ID, dos);
+				writeString(this.Country, dos);
 
 				// String
 
-				writeString(this.Customer_Type, dos);
-
-				// String
-
-				writeString(this.Customer_Group_ID, dos);
-
-				// String
-
-				writeString(this.Customer_Group, dos);
+				writeString(this.Country_Name, dos);
 
 				// String
 
@@ -1679,31 +1579,55 @@ public class customer_group implements TalendJob {
 
 				// String
 
+				writeString(this.Employee_Gender, dos);
+
+				// String
+
 				writeString(this.Employee_Country, dos);
 
 				// String
 
-				writeString(this.Employee_Org_Level, dos);
+				writeString(this.Order_Type, dos);
 
 				// String
 
-				writeString(this.Org_Level_Name, dos);
+				writeString(this.Order_Date, dos);
 
 				// String
 
-				writeString(this.Country, dos);
+				writeString(this.Delivery_Date, dos);
 
 				// String
 
-				writeString(this.Country_Name, dos);
+				writeString(this.Product_ID, dos);
 
 				// String
 
-				writeString(this.Country_ID, dos);
+				writeString(this.Product_Name, dos);
 
 				// String
 
-				writeString(this.Country_FormerName, dos);
+				writeString(this.Product_Ref_ID, dos);
+
+				// Integer
+
+				writeInteger(this.Quantity, dos);
+
+				// String
+
+				writeString(this.Order_ID, dos);
+
+				// String
+
+				writeString(this.Order_Item_Num, dos);
+
+				// String
+
+				writeString(this.CostPrice_Per_Unit, dos);
+
+				// String
+
+				writeString(this.Total_Retail_Price, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1716,59 +1640,23 @@ public class customer_group implements TalendJob {
 
 				// String
 
-				writeString(this.Order_ID, dos);
+				writeString(this.Customer_Group_ID, dos);
 
 				// String
 
-				writeString(this.Order_Type, dos);
+				writeString(this.Customer_Group, dos);
 
 				// String
 
-				writeString(this.Order_Date, dos);
+				writeString(this.Customer_Type_ID, dos);
 
 				// String
 
-				writeString(this.Delivery_Date, dos);
+				writeString(this.Customer_Type, dos);
 
 				// String
 
-				writeString(this.Order_Item_Num, dos);
-
-				// Integer
-
-				writeInteger(this.Quantity, dos);
-
-				// String
-
-				writeString(this.Total_Retail_Price, dos);
-
-				// String
-
-				writeString(this.CostPrice_Per_Unit, dos);
-
-				// String
-
-				writeString(this.Product_ID, dos);
-
-				// String
-
-				writeString(this.Product_Name, dos);
-
-				// String
-
-				writeString(this.Product_Level, dos);
-
-				// String
-
-				writeString(this.Product_Level_Name, dos);
-
-				// String
-
-				writeString(this.Product_Ref_ID, dos);
-
-				// List
-
-				dos.writeObject(this.Customer_ID);
+				writeString(this.Birth_Date, dos);
 
 				// Character
 
@@ -1781,23 +1669,15 @@ public class customer_group implements TalendJob {
 
 				// String
 
-				writeString(this.Birth_Date, dos);
+				writeString(this.Customer_ID, dos);
 
 				// String
 
-				writeString(this.Customer_Type_ID, dos);
+				writeString(this.Country, dos);
 
 				// String
 
-				writeString(this.Customer_Type, dos);
-
-				// String
-
-				writeString(this.Customer_Group_ID, dos);
-
-				// String
-
-				writeString(this.Customer_Group, dos);
+				writeString(this.Country_Name, dos);
 
 				// String
 
@@ -1813,31 +1693,55 @@ public class customer_group implements TalendJob {
 
 				// String
 
+				writeString(this.Employee_Gender, dos);
+
+				// String
+
 				writeString(this.Employee_Country, dos);
 
 				// String
 
-				writeString(this.Employee_Org_Level, dos);
+				writeString(this.Order_Type, dos);
 
 				// String
 
-				writeString(this.Org_Level_Name, dos);
+				writeString(this.Order_Date, dos);
 
 				// String
 
-				writeString(this.Country, dos);
+				writeString(this.Delivery_Date, dos);
 
 				// String
 
-				writeString(this.Country_Name, dos);
+				writeString(this.Product_ID, dos);
 
 				// String
 
-				writeString(this.Country_ID, dos);
+				writeString(this.Product_Name, dos);
 
 				// String
 
-				writeString(this.Country_FormerName, dos);
+				writeString(this.Product_Ref_ID, dos);
+
+				// Integer
+
+				writeInteger(this.Quantity, dos);
+
+				// String
+
+				writeString(this.Order_ID, dos);
+
+				// String
+
+				writeString(this.Order_Item_Num, dos);
+
+				// String
+
+				writeString(this.CostPrice_Per_Unit, dos);
+
+				// String
+
+				writeString(this.Total_Retail_Price, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1850,36 +1754,31 @@ public class customer_group implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("Order_ID=" + Order_ID);
-			sb.append(",Order_Type=" + Order_Type);
-			sb.append(",Order_Date=" + Order_Date);
-			sb.append(",Delivery_Date=" + Delivery_Date);
-			sb.append(",Order_Item_Num=" + Order_Item_Num);
-			sb.append(",Quantity=" + String.valueOf(Quantity));
-			sb.append(",Total_Retail_Price=" + Total_Retail_Price);
-			sb.append(",CostPrice_Per_Unit=" + CostPrice_Per_Unit);
-			sb.append(",Product_ID=" + Product_ID);
-			sb.append(",Product_Name=" + Product_Name);
-			sb.append(",Product_Level=" + Product_Level);
-			sb.append(",Product_Level_Name=" + Product_Level_Name);
-			sb.append(",Product_Ref_ID=" + Product_Ref_ID);
-			sb.append(",Customer_ID=" + String.valueOf(Customer_ID));
-			sb.append(",Gender=" + String.valueOf(Gender));
-			sb.append(",Birth_Date=" + Birth_Date);
+			sb.append("Customer_Group_ID=" + Customer_Group_ID);
+			sb.append(",Customer_Group=" + Customer_Group);
 			sb.append(",Customer_Type_ID=" + Customer_Type_ID);
 			sb.append(",Customer_Type=" + Customer_Type);
-			sb.append(",Customer_Group_ID=" + Customer_Group_ID);
-			sb.append(",Customer_Group=" + Customer_Group);
+			sb.append(",Birth_Date=" + Birth_Date);
+			sb.append(",Gender=" + String.valueOf(Gender));
+			sb.append(",Customer_ID=" + Customer_ID);
+			sb.append(",Country=" + Country);
+			sb.append(",Country_Name=" + Country_Name);
 			sb.append(",Employee_ID=" + Employee_ID);
 			sb.append(",Employee_Job_Title=" + Employee_Job_Title);
 			sb.append(",Employee_Salary=" + String.valueOf(Employee_Salary));
+			sb.append(",Employee_Gender=" + Employee_Gender);
 			sb.append(",Employee_Country=" + Employee_Country);
-			sb.append(",Employee_Org_Level=" + Employee_Org_Level);
-			sb.append(",Org_Level_Name=" + Org_Level_Name);
-			sb.append(",Country=" + Country);
-			sb.append(",Country_Name=" + Country_Name);
-			sb.append(",Country_ID=" + Country_ID);
-			sb.append(",Country_FormerName=" + Country_FormerName);
+			sb.append(",Order_Type=" + Order_Type);
+			sb.append(",Order_Date=" + Order_Date);
+			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Product_ID=" + Product_ID);
+			sb.append(",Product_Name=" + Product_Name);
+			sb.append(",Product_Ref_ID=" + Product_Ref_ID);
+			sb.append(",Quantity=" + String.valueOf(Quantity));
+			sb.append(",Order_ID=" + Order_ID);
+			sb.append(",Order_Item_Num=" + Order_Item_Num);
+			sb.append(",CostPrice_Per_Unit=" + CostPrice_Per_Unit);
+			sb.append(",Total_Retail_Price=" + Total_Retail_Price);
 			sb.append("]");
 
 			return sb.toString();
@@ -2174,158 +2073,33 @@ public class customer_group implements TalendJob {
 				final routines.system.RowState rowstate_tFileInputDelimited_1 = new routines.system.RowState();
 
 				int nb_line_tFileInputDelimited_1 = 0;
-				int footer_tFileInputDelimited_1 = 1;
-				int totalLinetFileInputDelimited_1 = 0;
-				int limittFileInputDelimited_1 = -1;
-				int lastLinetFileInputDelimited_1 = -1;
-
-				char fieldSeparator_tFileInputDelimited_1[] = null;
-
-				// support passing value (property: Field Separator) by 'context.fs' or
-				// 'globalMap.get("fs")'.
-				if (((String) ";").length() > 0) {
-					fieldSeparator_tFileInputDelimited_1 = ((String) ";").toCharArray();
-				} else {
-					throw new IllegalArgumentException("Field Separator must be assigned a char.");
-				}
-
-				char rowSeparator_tFileInputDelimited_1[] = null;
-
-				// support passing value (property: Row Separator) by 'context.rs' or
-				// 'globalMap.get("rs")'.
-				if (((String) "\n").length() > 0) {
-					rowSeparator_tFileInputDelimited_1 = ((String) "\n").toCharArray();
-				} else {
-					throw new IllegalArgumentException("Row Separator must be assigned a char.");
-				}
-
-				Object filename_tFileInputDelimited_1 = /** Start field tFileInputDelimited_1:FILENAME */
-						context.folderName + "/files/BDD_CASIOP.csv"/** End field tFileInputDelimited_1:FILENAME */
-				;
-				com.talend.csv.CSVReader csvReadertFileInputDelimited_1 = null;
-
+				org.talend.fileprocess.FileInputDelimited fid_tFileInputDelimited_1 = null;
+				int limit_tFileInputDelimited_1 = -1;
 				try {
 
-					String[] rowtFileInputDelimited_1 = null;
-					int currentLinetFileInputDelimited_1 = 0;
-					int outputLinetFileInputDelimited_1 = 0;
-					try {// TD110 begin
-						if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
+					Object filename_tFileInputDelimited_1 = context.folderName + "/files/BDD_CASIOP.csv";
+					if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
 
-							int footer_value_tFileInputDelimited_1 = 1;
-							if (footer_value_tFileInputDelimited_1 > 0) {
-								throw new java.lang.Exception(
-										"When the input source is a stream,footer shouldn't be bigger than 0.");
-							}
-
-							csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-									(java.io.InputStream) filename_tFileInputDelimited_1,
-									fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-						} else {
-							csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-									String.valueOf(filename_tFileInputDelimited_1),
-									fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
+						int footer_value_tFileInputDelimited_1 = 0, random_value_tFileInputDelimited_1 = -1;
+						if (footer_value_tFileInputDelimited_1 > 0 || random_value_tFileInputDelimited_1 > 0) {
+							throw new java.lang.Exception(
+									"When the input source is a stream,footer and random shouldn't be bigger than 0.");
 						}
 
-						csvReadertFileInputDelimited_1.setTrimWhitespace(false);
-						if ((rowSeparator_tFileInputDelimited_1[0] != '\n')
-								&& (rowSeparator_tFileInputDelimited_1[0] != '\r'))
-							csvReadertFileInputDelimited_1.setLineEnd("" + rowSeparator_tFileInputDelimited_1[0]);
-
-						csvReadertFileInputDelimited_1.setQuoteChar('"');
-
-						csvReadertFileInputDelimited_1.setEscapeChar(csvReadertFileInputDelimited_1.getQuoteChar());
-
-						if (footer_tFileInputDelimited_1 > 0) {
-							for (totalLinetFileInputDelimited_1 = 0; totalLinetFileInputDelimited_1 < 1; totalLinetFileInputDelimited_1++) {
-								csvReadertFileInputDelimited_1.readNext();
-							}
-							csvReadertFileInputDelimited_1.setSkipEmptyRecords(true);
-							while (csvReadertFileInputDelimited_1.readNext()) {
-
-								rowtFileInputDelimited_1 = csvReadertFileInputDelimited_1.getValues();
-								if (!(rowtFileInputDelimited_1.length == 1
-										&& ("\015").equals(rowtFileInputDelimited_1[0]))) {// empty line when row
-																							// separator is '\n'
-
-									totalLinetFileInputDelimited_1++;
-
-								}
-
-							}
-							int lastLineTemptFileInputDelimited_1 = totalLinetFileInputDelimited_1
-									- footer_tFileInputDelimited_1 < 0 ? 0
-											: totalLinetFileInputDelimited_1 - footer_tFileInputDelimited_1;
-							if (lastLinetFileInputDelimited_1 > 0) {
-								lastLinetFileInputDelimited_1 = lastLinetFileInputDelimited_1 < lastLineTemptFileInputDelimited_1
-										? lastLinetFileInputDelimited_1
-										: lastLineTemptFileInputDelimited_1;
-							} else {
-								lastLinetFileInputDelimited_1 = lastLineTemptFileInputDelimited_1;
-							}
-
-							csvReadertFileInputDelimited_1.close();
-							if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
-								csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-										(java.io.InputStream) filename_tFileInputDelimited_1,
-										fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-							} else {
-								csvReadertFileInputDelimited_1 = new com.talend.csv.CSVReader(
-										String.valueOf(filename_tFileInputDelimited_1),
-										fieldSeparator_tFileInputDelimited_1[0], "UTF-8");
-							}
-							csvReadertFileInputDelimited_1.setTrimWhitespace(false);
-							if ((rowSeparator_tFileInputDelimited_1[0] != '\n')
-									&& (rowSeparator_tFileInputDelimited_1[0] != '\r'))
-								csvReadertFileInputDelimited_1.setLineEnd("" + rowSeparator_tFileInputDelimited_1[0]);
-
-							csvReadertFileInputDelimited_1.setQuoteChar('"');
-
-							csvReadertFileInputDelimited_1.setEscapeChar(csvReadertFileInputDelimited_1.getQuoteChar());
-
-						}
-
-						if (limittFileInputDelimited_1 != 0) {
-							for (currentLinetFileInputDelimited_1 = 0; currentLinetFileInputDelimited_1 < 1; currentLinetFileInputDelimited_1++) {
-								csvReadertFileInputDelimited_1.readNext();
-							}
-						}
-						csvReadertFileInputDelimited_1.setSkipEmptyRecords(true);
-
+					}
+					try {
+						fid_tFileInputDelimited_1 = new org.talend.fileprocess.FileInputDelimited(
+								context.folderName + "/files/BDD_CASIOP.csv", "UTF-8", ";", "\n", false, 1, 0,
+								limit_tFileInputDelimited_1, -1, false);
 					} catch (java.lang.Exception e) {
 						globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
 
 						System.err.println(e.getMessage());
 
-					} // TD110 end
+					}
 
-					while (limittFileInputDelimited_1 != 0 && csvReadertFileInputDelimited_1 != null
-							&& csvReadertFileInputDelimited_1.readNext()) {
+					while (fid_tFileInputDelimited_1 != null && fid_tFileInputDelimited_1.nextRecord()) {
 						rowstate_tFileInputDelimited_1.reset();
-
-						rowtFileInputDelimited_1 = csvReadertFileInputDelimited_1.getValues();
-
-						if (rowtFileInputDelimited_1.length == 1 && ("\015").equals(rowtFileInputDelimited_1[0])) {// empty
-																													// line
-																													// when
-																													// row
-																													// separator
-																													// is
-																													// '\n'
-							continue;
-						}
-
-						currentLinetFileInputDelimited_1++;
-
-						if (lastLinetFileInputDelimited_1 > -1
-								&& currentLinetFileInputDelimited_1 > lastLinetFileInputDelimited_1) {
-							break;
-						}
-						outputLinetFileInputDelimited_1++;
-						if (limittFileInputDelimited_1 > 0
-								&& outputLinetFileInputDelimited_1 > limittFileInputDelimited_1) {
-							break;
-						}
 
 						row1 = null;
 
@@ -2333,528 +2107,176 @@ public class customer_group implements TalendJob {
 						row1 = new row1Struct();
 						try {
 
-							char fieldSeparator_tFileInputDelimited_1_ListType[] = null;
-							// support passing value (property: Field Separator) by 'context.fs' or
-							// 'globalMap.get("fs")'.
-							if (((String) ";").length() > 0) {
-								fieldSeparator_tFileInputDelimited_1_ListType = ((String) ";").toCharArray();
+							int columnIndexWithD_tFileInputDelimited_1 = 0;
+
+							String temp = "";
+
+							columnIndexWithD_tFileInputDelimited_1 = 0;
+
+							row1.Customer_Group_ID = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 1;
+
+							row1.Customer_Group = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 2;
+
+							row1.Customer_Type_ID = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 3;
+
+							row1.Customer_Type = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 4;
+
+							row1.Birth_Date = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 5;
+
+							temp = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+							if (temp.length() > 0) {
+
+								try {
+
+									row1.Gender = ParserUtils.parseTo_Character(temp);
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_1) {
+									globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
+											ex_tFileInputDelimited_1.getMessage());
+									rowstate_tFileInputDelimited_1.setException(new RuntimeException(String.format(
+											"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+											"Gender", "row1", temp, ex_tFileInputDelimited_1),
+											ex_tFileInputDelimited_1));
+								}
+
 							} else {
-								throw new IllegalArgumentException("Field Separator must be assigned a char.");
-							}
-							if (rowtFileInputDelimited_1.length == 1 && ("\015").equals(rowtFileInputDelimited_1[0])) {// empty
-																														// line
-																														// when
-																														// row
-																														// separator
-																														// is
-																														// '\n'
-
-								row1.Order_ID = null;
-
-								row1.Order_Type = null;
-
-								row1.Order_Date = null;
-
-								row1.Delivery_Date = null;
-
-								row1.Order_Item_Num = null;
-
-								row1.Quantity = null;
-
-								row1.Total_Retail_Price = null;
-
-								row1.CostPrice_Per_Unit = null;
-
-								row1.Product_ID = null;
-
-								row1.Product_Name = null;
-
-								row1.Product_Level = null;
-
-								row1.Product_Level_Name = null;
-
-								row1.Product_Ref_ID = null;
-
-								row1.Customer_ID = null;
 
 								row1.Gender = null;
 
-								row1.Birth_Date = null;
+							}
 
-								row1.Customer_Type_ID = null;
+							columnIndexWithD_tFileInputDelimited_1 = 6;
 
-								row1.Customer_Type = null;
+							row1.Customer_ID = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
 
-								row1.Customer_Group_ID = null;
+							columnIndexWithD_tFileInputDelimited_1 = 7;
 
-								row1.Customer_Group = null;
+							row1.Country = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
 
-								row1.Employee_ID = null;
+							columnIndexWithD_tFileInputDelimited_1 = 8;
 
-								row1.Employee_Job_Title = null;
+							row1.Country_Name = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
 
-								row1.Employee_Salary = null;
+							columnIndexWithD_tFileInputDelimited_1 = 9;
 
-								row1.Employee_Country = null;
+							row1.Employee_ID = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
 
-								row1.Employee_Org_Level = null;
+							columnIndexWithD_tFileInputDelimited_1 = 10;
 
-								row1.Org_Level_Name = null;
+							row1.Employee_Job_Title = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
 
-								row1.Country = null;
+							columnIndexWithD_tFileInputDelimited_1 = 11;
 
-								row1.Country_Name = null;
+							temp = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+							if (temp.length() > 0) {
 
-								row1.Country_ID = null;
+								try {
 
-								row1.Country_FormerName = null;
+									row1.Employee_Salary = ParserUtils.parseTo_Integer(temp);
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_1) {
+									globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
+											ex_tFileInputDelimited_1.getMessage());
+									rowstate_tFileInputDelimited_1.setException(new RuntimeException(String.format(
+											"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+											"Employee_Salary", "row1", temp, ex_tFileInputDelimited_1),
+											ex_tFileInputDelimited_1));
+								}
 
 							} else {
 
-								int columnIndexWithD_tFileInputDelimited_1 = 0; // Column Index
-
-								columnIndexWithD_tFileInputDelimited_1 = 0;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Order_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Order_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 1;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Order_Type = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Order_Type = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 2;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Order_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Order_Date = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 3;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Delivery_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Delivery_Date = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 4;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Order_Item_Num = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Order_Item_Num = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 5;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.Quantity = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Quantity", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.Quantity = null;
-
-									}
-
-								} else {
-
-									row1.Quantity = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 6;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Total_Retail_Price = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Total_Retail_Price = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 7;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.CostPrice_Per_Unit = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.CostPrice_Per_Unit = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 8;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Product_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Product_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 9;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Product_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Product_Name = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 10;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Product_Level = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Product_Level = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 11;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Product_Level_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Product_Level_Name = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 12;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Product_Ref_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Product_Ref_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 13;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.Customer_ID = ParserUtils.parseTo_List(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-													String.valueOf(fieldSeparator_tFileInputDelimited_1_ListType[0]));
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Customer_ID", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.Customer_ID = null;
-
-									}
-
-								} else {
-
-									row1.Customer_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 14;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.Gender = ParserUtils.parseTo_Character(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Gender", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.Gender = null;
-
-									}
-
-								} else {
-
-									row1.Gender = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 15;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Birth_Date = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Birth_Date = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 16;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Customer_Type_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Customer_Type_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 17;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Customer_Type = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Customer_Type = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 18;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Customer_Group_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Customer_Group_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 19;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Customer_Group = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Customer_Group = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 20;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Employee_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Employee_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 21;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Employee_Job_Title = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Employee_Job_Title = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 22;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									if (rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1].length() > 0) {
-										try {
-
-											row1.Employee_Salary = ParserUtils.parseTo_Integer(
-													rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1]);
-
-										} catch (java.lang.Exception ex_tFileInputDelimited_1) {
-											globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
-													ex_tFileInputDelimited_1.getMessage());
-											rowstate_tFileInputDelimited_1.setException(new RuntimeException(String
-													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
-															"Employee_Salary", "row1",
-															rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1],
-															ex_tFileInputDelimited_1),
-													ex_tFileInputDelimited_1));
-										}
-									} else {
-
-										row1.Employee_Salary = null;
-
-									}
-
-								} else {
-
-									row1.Employee_Salary = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 23;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Employee_Country = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Employee_Country = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 24;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Employee_Org_Level = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Employee_Org_Level = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 25;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Org_Level_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Org_Level_Name = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 26;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Country = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Country = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 27;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Country_Name = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Country_Name = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 28;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Country_ID = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Country_ID = null;
-
-								}
-
-								columnIndexWithD_tFileInputDelimited_1 = 29;
-
-								if (columnIndexWithD_tFileInputDelimited_1 < rowtFileInputDelimited_1.length) {
-
-									row1.Country_FormerName = rowtFileInputDelimited_1[columnIndexWithD_tFileInputDelimited_1];
-
-								} else {
-
-									row1.Country_FormerName = null;
-
-								}
+								row1.Employee_Salary = null;
 
 							}
+
+							columnIndexWithD_tFileInputDelimited_1 = 12;
+
+							row1.Employee_Gender = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 13;
+
+							row1.Employee_Country = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 14;
+
+							row1.Order_Type = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 15;
+
+							row1.Order_Date = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 16;
+
+							row1.Delivery_Date = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 17;
+
+							row1.Product_ID = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 18;
+
+							row1.Product_Name = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 19;
+
+							row1.Product_Ref_ID = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 20;
+
+							temp = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+							if (temp.length() > 0) {
+
+								try {
+
+									row1.Quantity = ParserUtils.parseTo_Integer(temp);
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_1) {
+									globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
+											ex_tFileInputDelimited_1.getMessage());
+									rowstate_tFileInputDelimited_1.setException(new RuntimeException(String.format(
+											"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+											"Quantity", "row1", temp, ex_tFileInputDelimited_1),
+											ex_tFileInputDelimited_1));
+								}
+
+							} else {
+
+								row1.Quantity = null;
+
+							}
+
+							columnIndexWithD_tFileInputDelimited_1 = 21;
+
+							row1.Order_ID = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 22;
+
+							row1.Order_Item_Num = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 23;
+
+							row1.CostPrice_Per_Unit = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 24;
+
+							row1.Total_Retail_Price = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
 
 							if (rowstate_tFileInputDelimited_1.getException() != null) {
 								throw rowstate_tFileInputDelimited_1.getException();
@@ -2866,8 +2288,6 @@ public class customer_group implements TalendJob {
 
 							System.err.println(e.getMessage());
 							row1 = null;
-
-							globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
 
 						}
 
@@ -3166,19 +2586,17 @@ public class customer_group implements TalendJob {
 
 						currentComponent = "tFileInputDelimited_1";
 
-						nb_line_tFileInputDelimited_1++;
 					}
-
 				} finally {
-					if (!(filename_tFileInputDelimited_1 instanceof java.io.InputStream)) {
-						if (csvReadertFileInputDelimited_1 != null) {
-							csvReadertFileInputDelimited_1.close();
+					if (!((Object) (context.folderName + "/files/BDD_CASIOP.csv") instanceof java.io.InputStream)) {
+						if (fid_tFileInputDelimited_1 != null) {
+							fid_tFileInputDelimited_1.close();
 						}
 					}
-					if (csvReadertFileInputDelimited_1 != null) {
-						globalMap.put("tFileInputDelimited_1_NB_LINE", nb_line_tFileInputDelimited_1);
-					}
+					if (fid_tFileInputDelimited_1 != null) {
+						globalMap.put("tFileInputDelimited_1_NB_LINE", fid_tFileInputDelimited_1.getRowNumber());
 
+					}
 				}
 
 				ok_Hash.put("tFileInputDelimited_1", true);
@@ -3376,7 +2794,7 @@ public class customer_group implements TalendJob {
 	public int portTraces = 4334;
 	public String clientHost;
 	public String defaultClientHost = "localhost";
-	public String contextStr = "alice";
+	public String contextStr = "jordan";
 	public boolean isDefaultContext = true;
 	public String pid = "0";
 	public String rootPid = null;
@@ -3741,6 +3159,6 @@ public class customer_group implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 107815 characters generated by Talend Open Studio for Data Integration on the
- * 7 mai 2024 à 11:20:22 CEST
+ * 89219 characters generated by Talend Open Studio for Data Integration on the
+ * 9 mai 2024 à 16:38:55 CEST
  ************************************************************************************************/
