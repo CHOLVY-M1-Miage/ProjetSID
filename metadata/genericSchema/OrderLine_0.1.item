@@ -5,10 +5,16 @@
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Te6JUw4iEe-HZfgavK5q_A" id="_F2pj4A4iEe-HZfgavK5q_A" label="OrderLine">
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVA4iEe-HZfgavK5q_A" name="Order_ID" label="Order_ID" length="20" talendType="id_String" key="true"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVQ4iEe-HZfgavK5q_A" name="Order_Item_Num" label="Order_Item_Num" length="20" talendType="id_Integer" key="true"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVg4iEe-HZfgavK5q_A" name="Total_Retail_Price" label="Total_Retail_Price" length="20" talendType="id_Float"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVw4iEe-HZfgavK5q_A" name="CostPrice_Per_Unit" label="CostPrice_Per_Unit" length="20" talendType="id_Float"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JWA4iEe-HZfgavK5q_A" name="Quantity" label="Quantity" length="20" talendType="id_Integer"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JWQ4iEe-HZfgavK5q_A" name="Product_ID" label="Product_ID" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JWA4iEe-HZfgavK5q_A" name="Quantity" label="Quantity" length="20" talendType="id_Integer"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ynC7MA7AEe-5n4nalt74VA" name="Product_Price_Per_Unit" label="Product_Price_Per_Unit" length="20" precision="2" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVg4iEe-HZfgavK5q_A" name="Total_Retail_Price" label="Total_Retail_Price" length="20" precision="2" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Te6JVw4iEe-HZfgavK5q_A" name="CostPrice_Per_Unit" label="CostPrice_Per_Unit" length="20" precision="2" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_3GcesA7AEe-5n4nalt74VA" name="Marge_Per_Unit" label="Marge_Per_Unit" length="20" precision="2" talendType="id_Float"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6fdo8A7AEe-5n4nalt74VA" name="Order_Type" label="Order_Type" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_8ceIMA7AEe-5n4nalt74VA" name="Order_Date" label="Order_Date" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_9onLMA7AEe-5n4nalt74VA" name="Delivery_Date" label="Delivery_Date" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__T9SsA7AEe-5n4nalt74VA" name="Country" label="Country" length="20" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
