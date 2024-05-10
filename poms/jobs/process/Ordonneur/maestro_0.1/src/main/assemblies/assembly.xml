@@ -255,6 +255,8 @@
             <outputDirectory>lib</outputDirectory>
             <includes>
                 <include>org.example.projetsid.code:routines:jar:8.0.1</include>
+                <include>org.talend.libraries:trove:jar:6.0.0</include>
+                <include>org.talend.libraries:advancedPersistentLookupLib-1.3:jar:6.0.0</include>
             </includes>
             <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>false</useProjectArtifact>
@@ -263,9 +265,12 @@
             <outputDirectory>lib</outputDirectory>
             <includes>
                 <include>org.postgresql:postgresql:jar:42.2.14</include>
+                <include>org.apache.logging.log4j:log4j-1.2-api:jar:2.13.2</include>
                 <include>org.apache.logging.log4j:log4j-api:jar:2.13.2</include>
+                <include>commons-collections:commons-collections:jar:3.2.2</include>
                 <include>org.apache.logging.log4j:log4j-core:jar:2.13.2</include>
                 <include>org.talend.components:talendcsv:jar:1.0.0</include>
+                <include>org.jboss.marshalling:jboss-marshalling-river:jar:2.0.12.Final</include>
                 <include>org.talend.components.lib:talend_file_enhanced:jar:1.1</include>
                 <include>org.apache.logging.log4j:log4j-slf4j-impl:jar:2.13.2</include>
             </includes>
@@ -274,10 +279,28 @@
         <dependencySet>
             <outputDirectory>${talend.job.name}</outputDirectory>
             <includes>
+                <include>org.example.projetsid.job:dumpMonth:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpQuarter:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpOrderLine:jar:0.2.0</include>
+                <include>org.example.projetsid.job:dumpCustomerType:jar:0.2.0</include>
+                <include>org.example.projetsid.job:employee:jar:0.1.0</include>
+                <include>org.example.projetsid.job:product:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpProduct:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpOrder:jar:0.2.0</include>
+                <include>org.example.projetsid.job:time:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpCustomerGroup:jar:0.1.0</include>
+                <include>org.example.projetsid.job:customer:jar:0.1.0</include>
+                <include>org.example.projetsid.job:orderLine:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpDate:jar:0.1.0</include>
                 <include>org.example.projetsid.job:colonnesSelecteur:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpEmployee:jar:0.1.0</include>
+                <include>org.example.projetsid.job:customer_type:jar:0.1.0</include>
                 <include>org.example.projetsid.job:country:jar:0.1.0</include>
                 <include>org.example.projetsid.job:maestro:jar:0.1.0</include>
                 <include>org.example.projetsid.job:dumpCountry:jar:0.1.0</include>
+                <include>org.example.projetsid.job:dumpCustomer:jar:0.2.0</include>
+                <include>org.example.projetsid.job:customer_group:jar:0.1.0</include>
+                <include>org.example.projetsid.job:order:jar:0.1.0</include>
             </includes>
             <outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>true</useProjectArtifact>

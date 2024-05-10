@@ -5046,8 +5046,78 @@ public class time implements TalendJob {
 
 				int tos_count_tUniqRow_2 = 0;
 
+				class KeyStruct_tUniqRow_2 {
+
+					private static final int DEFAULT_HASHCODE = 1;
+					private static final int PRIME = 31;
+					private int hashCode = DEFAULT_HASHCODE;
+					public boolean hashCodeDirty = true;
+
+					java.util.Date date;
+					String dayWeekName;
+					String monthId;
+
+					@Override
+					public int hashCode() {
+						if (this.hashCodeDirty) {
+							final int prime = PRIME;
+							int result = DEFAULT_HASHCODE;
+
+							result = prime * result + ((this.date == null) ? 0 : this.date.hashCode());
+
+							result = prime * result + ((this.dayWeekName == null) ? 0 : this.dayWeekName.hashCode());
+
+							result = prime * result + ((this.monthId == null) ? 0 : this.monthId.hashCode());
+
+							this.hashCode = result;
+							this.hashCodeDirty = false;
+						}
+						return this.hashCode;
+					}
+
+					@Override
+					public boolean equals(Object obj) {
+						if (this == obj)
+							return true;
+						if (obj == null)
+							return false;
+						if (getClass() != obj.getClass())
+							return false;
+						final KeyStruct_tUniqRow_2 other = (KeyStruct_tUniqRow_2) obj;
+
+						if (this.date == null) {
+							if (other.date != null)
+								return false;
+
+						} else if (!this.date.equals(other.date))
+
+							return false;
+
+						if (this.dayWeekName == null) {
+							if (other.dayWeekName != null)
+								return false;
+
+						} else if (!this.dayWeekName.equals(other.dayWeekName))
+
+							return false;
+
+						if (this.monthId == null) {
+							if (other.monthId != null)
+								return false;
+
+						} else if (!this.monthId.equals(other.monthId))
+
+							return false;
+
+						return true;
+					}
+
+				}
+
 				int nb_uniques_tUniqRow_2 = 0;
 				int nb_duplicates_tUniqRow_2 = 0;
+				KeyStruct_tUniqRow_2 finder_tUniqRow_2 = new KeyStruct_tUniqRow_2();
+				java.util.Set<KeyStruct_tUniqRow_2> keystUniqRow_2 = new java.util.HashSet<KeyStruct_tUniqRow_2>();
 
 				/**
 				 * [tUniqRow_2 begin ] stop
@@ -5195,6 +5265,9 @@ public class time implements TalendJob {
 					public boolean hashCodeDirty = true;
 
 					String id;
+					Integer monthNb;
+					String monthName;
+					String quarterId;
 
 					@Override
 					public int hashCode() {
@@ -5203,6 +5276,12 @@ public class time implements TalendJob {
 							int result = DEFAULT_HASHCODE;
 
 							result = prime * result + ((this.id == null) ? 0 : this.id.hashCode());
+
+							result = prime * result + ((this.monthNb == null) ? 0 : this.monthNb.hashCode());
+
+							result = prime * result + ((this.monthName == null) ? 0 : this.monthName.hashCode());
+
+							result = prime * result + ((this.quarterId == null) ? 0 : this.quarterId.hashCode());
 
 							this.hashCode = result;
 							this.hashCodeDirty = false;
@@ -5225,6 +5304,30 @@ public class time implements TalendJob {
 								return false;
 
 						} else if (!this.id.equals(other.id))
+
+							return false;
+
+						if (this.monthNb == null) {
+							if (other.monthNb != null)
+								return false;
+
+						} else if (!this.monthNb.equals(other.monthNb))
+
+							return false;
+
+						if (this.monthName == null) {
+							if (other.monthName != null)
+								return false;
+
+						} else if (!this.monthName.equals(other.monthName))
+
+							return false;
+
+						if (this.quarterId == null) {
+							if (other.quarterId != null)
+								return false;
+
+						} else if (!this.quarterId.equals(other.quarterId))
 
 							return false;
 
@@ -5382,6 +5485,8 @@ public class time implements TalendJob {
 					public boolean hashCodeDirty = true;
 
 					String id;
+					String quarterName;
+					Integer year;
 
 					@Override
 					public int hashCode() {
@@ -5390,6 +5495,10 @@ public class time implements TalendJob {
 							int result = DEFAULT_HASHCODE;
 
 							result = prime * result + ((this.id == null) ? 0 : this.id.hashCode());
+
+							result = prime * result + ((this.quarterName == null) ? 0 : this.quarterName.hashCode());
+
+							result = prime * result + ((this.year == null) ? 0 : this.year.hashCode());
 
 							this.hashCode = result;
 							this.hashCodeDirty = false;
@@ -5412,6 +5521,22 @@ public class time implements TalendJob {
 								return false;
 
 						} else if (!this.id.equals(other.id))
+
+							return false;
+
+						if (this.quarterName == null) {
+							if (other.quarterName != null)
+								return false;
+
+						} else if (!this.quarterName.equals(other.quarterName))
+
+							return false;
+
+						if (this.year == null) {
+							if (other.year != null)
+								return false;
+
+						} else if (!this.year.equals(other.year))
 
 							return false;
 
@@ -6523,9 +6648,46 @@ public class time implements TalendJob {
 												);
 											}
 
-											row9.date = row6.date;
-											row9.dayWeekName = row6.dayWeekName;
-											row9.monthId = row6.monthId;
+											row9 = null;
+											finder_tUniqRow_2.date = row6.date;
+											if (row6.dayWeekName == null) {
+												finder_tUniqRow_2.dayWeekName = null;
+											} else {
+												finder_tUniqRow_2.dayWeekName = row6.dayWeekName.toLowerCase();
+											}
+											if (row6.monthId == null) {
+												finder_tUniqRow_2.monthId = null;
+											} else {
+												finder_tUniqRow_2.monthId = row6.monthId.toLowerCase();
+											}
+											finder_tUniqRow_2.hashCodeDirty = true;
+											if (!keystUniqRow_2.contains(finder_tUniqRow_2)) {
+												KeyStruct_tUniqRow_2 new_tUniqRow_2 = new KeyStruct_tUniqRow_2();
+
+												new_tUniqRow_2.date = row6.date;
+												if (row6.dayWeekName == null) {
+													new_tUniqRow_2.dayWeekName = null;
+												} else {
+													new_tUniqRow_2.dayWeekName = row6.dayWeekName.toLowerCase();
+												}
+												if (row6.monthId == null) {
+													new_tUniqRow_2.monthId = null;
+												} else {
+													new_tUniqRow_2.monthId = row6.monthId.toLowerCase();
+												}
+
+												keystUniqRow_2.add(new_tUniqRow_2);
+												if (row9 == null) {
+
+													row9 = new row9Struct();
+												}
+												row9.date = row6.date;
+												row9.dayWeekName = row6.dayWeekName;
+												row9.monthId = row6.monthId;
+												nb_uniques_tUniqRow_2++;
+											} else {
+												nb_duplicates_tUniqRow_2++;
+											}
 
 											tos_count_tUniqRow_2++;
 
@@ -6686,6 +6848,17 @@ public class time implements TalendJob {
 											} else {
 												finder_tUniqRow_3.id = row8.id.toLowerCase();
 											}
+											finder_tUniqRow_3.monthNb = row8.monthNb;
+											if (row8.monthName == null) {
+												finder_tUniqRow_3.monthName = null;
+											} else {
+												finder_tUniqRow_3.monthName = row8.monthName.toLowerCase();
+											}
+											if (row8.quarterId == null) {
+												finder_tUniqRow_3.quarterId = null;
+											} else {
+												finder_tUniqRow_3.quarterId = row8.quarterId.toLowerCase();
+											}
 											finder_tUniqRow_3.hashCodeDirty = true;
 											if (!keystUniqRow_3.contains(finder_tUniqRow_3)) {
 												KeyStruct_tUniqRow_3 new_tUniqRow_3 = new KeyStruct_tUniqRow_3();
@@ -6694,6 +6867,17 @@ public class time implements TalendJob {
 													new_tUniqRow_3.id = null;
 												} else {
 													new_tUniqRow_3.id = row8.id.toLowerCase();
+												}
+												new_tUniqRow_3.monthNb = row8.monthNb;
+												if (row8.monthName == null) {
+													new_tUniqRow_3.monthName = null;
+												} else {
+													new_tUniqRow_3.monthName = row8.monthName.toLowerCase();
+												}
+												if (row8.quarterId == null) {
+													new_tUniqRow_3.quarterId = null;
+												} else {
+													new_tUniqRow_3.quarterId = row8.quarterId.toLowerCase();
 												}
 
 												keystUniqRow_3.add(new_tUniqRow_3);
@@ -6872,6 +7056,12 @@ public class time implements TalendJob {
 											} else {
 												finder_tUniqRow_4.id = row7.id.toLowerCase();
 											}
+											if (row7.quarterName == null) {
+												finder_tUniqRow_4.quarterName = null;
+											} else {
+												finder_tUniqRow_4.quarterName = row7.quarterName.toLowerCase();
+											}
+											finder_tUniqRow_4.year = row7.year;
 											finder_tUniqRow_4.hashCodeDirty = true;
 											if (!keystUniqRow_4.contains(finder_tUniqRow_4)) {
 												KeyStruct_tUniqRow_4 new_tUniqRow_4 = new KeyStruct_tUniqRow_4();
@@ -6881,6 +7071,12 @@ public class time implements TalendJob {
 												} else {
 													new_tUniqRow_4.id = row7.id.toLowerCase();
 												}
+												if (row7.quarterName == null) {
+													new_tUniqRow_4.quarterName = null;
+												} else {
+													new_tUniqRow_4.quarterName = row7.quarterName.toLowerCase();
+												}
+												new_tUniqRow_4.year = row7.year;
 
 												keystUniqRow_4.add(new_tUniqRow_4);
 												if (row11 == null) {
@@ -7966,6 +8162,6 @@ public class time implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 209631 characters generated by Talend Open Studio for Data Integration on the
- * 9 mai 2024 à 17:24:00 CEST
+ * 215175 characters generated by Talend Open Studio for Data Integration on the
+ * 9 mai 2024 à 20:45:44 CEST
  ************************************************************************************************/

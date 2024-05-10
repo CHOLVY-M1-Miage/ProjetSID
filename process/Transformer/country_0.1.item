@@ -54,7 +54,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:orSBHVF3vaPnOtex3cqsGtKLT7vexbovZFJDqDsV" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:8fxEHc4kq8x5KWFux9lytlf6e9WpoT3vaw4LnucN" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -89,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:eRjZaI6cWTNVqeeYvves6OvNWk26xURqdTEnBClF" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:E5ljJvZJVwuwOmiGAYro4fOYEDGr3P7Si9P9PALT" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -323,7 +323,6 @@
     <metadata connector="FLOW" label="Country" name="tFilterColumns_2">
       <column comment="" key="true" length="50" name="Country" nullable="true" originalDbColumnName="country" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Country_Name" nullable="true" originalDbColumnName="country_Name" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Country_ID" nullable="true" originalDbColumnName="country_Id" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tUniqRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="128">
@@ -333,9 +332,6 @@
       <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Country_Name"/>
-      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
-      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Country_ID"/>
       <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
       <elementValue elementRef="CASE_SENSITIVE" value="false"/>
     </elementParameter>
@@ -349,17 +345,14 @@
     <metadata connector="FLOW" label="Country" name="tUniqRow_1">
       <column comment="" key="true" length="50" name="Country" nullable="true" originalDbColumnName="country" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Country_Name" nullable="true" originalDbColumnName="country_Name" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Country_ID" nullable="true" originalDbColumnName="country_Id" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="UNIQUE" label="Country" name="UNIQUE">
       <column comment="" key="true" length="50" name="Country" nullable="true" originalDbColumnName="country" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Country_Name" nullable="true" originalDbColumnName="country_Name" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Country_ID" nullable="true" originalDbColumnName="country_Id" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="DUPLICATE" label="Country" name="DUPLICATE">
       <column comment="" key="true" length="50" name="Country" nullable="true" originalDbColumnName="country" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Country_Name" nullable="true" originalDbColumnName="country_Name" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Country_ID" nullable="true" originalDbColumnName="country_Id" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="128">
@@ -382,8 +375,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Country_Name"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Country_ID"/>
-      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
@@ -392,7 +383,6 @@
     <metadata connector="FLOW" label="Country" name="tLogRow_3">
       <column comment="" key="true" length="50" name="Country" nullable="true" originalDbColumnName="country" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Country_Name" nullable="true" originalDbColumnName="country_Name" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Country_ID" nullable="true" originalDbColumnName="country_Id" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="128">
@@ -429,7 +419,6 @@
     <metadata connector="FLOW" label="Country" name="tFileOutputDelimited_2">
       <column comment="" key="true" length="50" name="Country" nullable="true" originalDbColumnName="country" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Country_Name" nullable="true" originalDbColumnName="country_Name" pattern="" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Country_ID" nullable="true" originalDbColumnName="country_Id" pattern="" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tFilterColumns_2">

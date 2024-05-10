@@ -1,0 +1,8 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="Integer.parseInt(row7.Birth_Date.split(&quot; &quot;)[5])">
+  <variables name="row7.Customer_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row7.Gender" value="null" talendType="id_Character" nullable="true"/>
+  <variables name="row7.Birth_Date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row7.Customer_Type_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="Integer.parseInt(row7.date.split(&quot; &quot;)[5]) " value="0" talendType="id_Integer"/>
+</expression:EMFExpression>

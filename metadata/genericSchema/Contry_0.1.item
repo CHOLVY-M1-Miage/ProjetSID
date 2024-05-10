@@ -5,7 +5,6 @@
     <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_cl6rgfi1Ee6tUrz43Ih9fw" id="_9rqZ0Pi0Ee6tUrz43Ih9fw" label="Country">
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cl6rgvi1Ee6tUrz43Ih9fw" name="country" label="Country" length="50" talendType="id_String" key="true"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cl6rg_i1Ee6tUrz43Ih9fw" name="country_Name" label="Country_Name" length="50" talendType="id_String"/>
-      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_cl6rhPi1Ee6tUrz43Ih9fw" name="country_Id" label="Country_ID" length="50" talendType="id_String"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>
