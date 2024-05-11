@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="fonctionsPerso.getDecadeAtOrderTime(row1.Order_Date, row2.Birth_Years)">
+  <variables name="row1.Order_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Order_Item_Num" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Product_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Quantity" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row1.Total_Retail_Price" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.CostPrice_Per_Unit" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Order_Type" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Order_Date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Delivery_Date" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Customer_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.Country" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Customer_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Gender" value="null" talendType="id_Character" nullable="true"/>
+  <variables name="row2.Birth_Years" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row2.Customer_Type_ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="Float.parseFloat(row1.Total_Retail_Price.replaceAll(&quot;,&quot;, &quot;.&quot;)) " value="0" talendType="id_Float"/>
+  <variables name="Float.parseFloat(row1.CostPrice_Per_Unit.replaceAll(&quot;,&quot;, &quot;.&quot;)) " value="0" talendType="id_Float"/>
+  <variables name="TalendDate.parseDate(&quot;yyyy/MM/dd&quot;, row1.Order_Date.split(&quot; &quot;)[5] + &quot;/&quot; + fonctionsPerso.getMonthNumber(row1.Order_Date.split(&quot; &quot;)[1]) + &quot;/&quot; + row1.Order_Date.split(&quot; &quot;)[2]); " value="null" talendType="id_Date"/>
+  <variables name="TalendDate.parseDate(&quot;yyyy/MM/dd&quot;, row1.Delivery_Date.split(&quot; &quot;)[5] + &quot;/&quot; + fonctionsPerso.getMonthNumber(row1.Delivery_Date.split(&quot; &quot;)[1]) + &quot;/&quot; + row1.Delivery_Date.split(&quot; &quot;)[2]); " value="null" talendType="id_Date"/>
+  <variables name="Var.total / row1.Quantity" value="0" talendType="id_Float"/>
+  <variables name="Var.Product_Price_Per_Unit - Var.cost" value="0" talendType="id_Float"/>
+  <variables name="" value="0" talendType="id_Integer"/>
+</expression:EMFExpression>

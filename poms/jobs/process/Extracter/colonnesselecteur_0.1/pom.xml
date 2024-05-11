@@ -17,7 +17,7 @@
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <talend.pigudf.groupid>org.example.projetsid.pigudf</talend.pigudf.groupid>
     <talend.job.folder>extracter/</talend.job.folder>
-    <talend.job.context>jordan</talend.job.context>
+    <talend.job.context>alice</talend.job.context>
     <talend.job.path>projetsid</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>

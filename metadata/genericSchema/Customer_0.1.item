@@ -7,6 +7,7 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwsw4gEe-HZfgavK5q_A" name="Gender" label="Gender" length="-1" talendType="id_Character"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwtA4gEe-HZfgavK5q_A" name="Birth_Years" label="Birth_Years" length="-1" talendType="id_Integer"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_iJFwtQ4gEe-HZfgavK5q_A" name="Customer_Type_ID" label="Customer_Type_ID" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__7CZoA7oEe-zvrRL-hVeRA" name="Total_Margin" label="Total_Margin" length="-1" talendType="id_Float"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>

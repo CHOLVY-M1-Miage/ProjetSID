@@ -356,6 +356,26 @@ public class orderLine implements TalendJob {
 		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tFileInputDelimited_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tFileInputDelimited_1_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
@@ -440,10 +460,22 @@ public class orderLine implements TalendJob {
 			return this.Delivery_Date;
 		}
 
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
 		public String Country;
 
 		public String getCountry() {
 			return this.Country;
+		}
+
+		public Integer Age_At_Order_Time;
+
+		public Integer getAge_At_Order_Time() {
+			return this.Age_At_Order_Time;
 		}
 
 		@Override
@@ -504,7 +536,9 @@ public class orderLine implements TalendJob {
 			other.Order_Type = this.Order_Type;
 			other.Order_Date = this.Order_Date;
 			other.Delivery_Date = this.Delivery_Date;
+			other.Customer_ID = this.Customer_ID;
 			other.Country = this.Country;
+			other.Age_At_Order_Time = this.Age_At_Order_Time;
 
 		}
 
@@ -709,7 +743,11 @@ public class orderLine implements TalendJob {
 
 					this.Delivery_Date = readDate(dis);
 
+					this.Customer_ID = readString(dis);
+
 					this.Country = readString(dis);
+
+					this.Age_At_Order_Time = readInteger(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -770,7 +808,11 @@ public class orderLine implements TalendJob {
 
 					this.Delivery_Date = readDate(dis);
 
+					this.Customer_ID = readString(dis);
+
 					this.Country = readString(dis);
+
+					this.Age_At_Order_Time = readInteger(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -850,7 +892,15 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
+
+				// Integer
+
+				writeInteger(this.Age_At_Order_Time, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -927,7 +977,15 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
+
+				// Integer
+
+				writeInteger(this.Age_At_Order_Time, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -951,7 +1009,9 @@ public class orderLine implements TalendJob {
 			sb.append(",Order_Type=" + Order_Type);
 			sb.append(",Order_Date=" + String.valueOf(Order_Date));
 			sb.append(",Delivery_Date=" + String.valueOf(Delivery_Date));
+			sb.append(",Customer_ID=" + Customer_ID);
 			sb.append(",Country=" + Country);
+			sb.append(",Age_At_Order_Time=" + String.valueOf(Age_At_Order_Time));
 			sb.append("]");
 
 			return sb.toString();
@@ -1076,10 +1136,22 @@ public class orderLine implements TalendJob {
 			return this.Delivery_Date;
 		}
 
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
 		public String Country;
 
 		public String getCountry() {
 			return this.Country;
+		}
+
+		public Integer Age_At_Order_Time;
+
+		public Integer getAge_At_Order_Time() {
+			return this.Age_At_Order_Time;
 		}
 
 		@Override
@@ -1140,7 +1212,9 @@ public class orderLine implements TalendJob {
 			other.Order_Type = this.Order_Type;
 			other.Order_Date = this.Order_Date;
 			other.Delivery_Date = this.Delivery_Date;
+			other.Customer_ID = this.Customer_ID;
 			other.Country = this.Country;
+			other.Age_At_Order_Time = this.Age_At_Order_Time;
 
 		}
 
@@ -1345,7 +1419,11 @@ public class orderLine implements TalendJob {
 
 					this.Delivery_Date = readDate(dis);
 
+					this.Customer_ID = readString(dis);
+
 					this.Country = readString(dis);
+
+					this.Age_At_Order_Time = readInteger(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1406,7 +1484,11 @@ public class orderLine implements TalendJob {
 
 					this.Delivery_Date = readDate(dis);
 
+					this.Customer_ID = readString(dis);
+
 					this.Country = readString(dis);
+
+					this.Age_At_Order_Time = readInteger(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1486,7 +1568,15 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
+
+				// Integer
+
+				writeInteger(this.Age_At_Order_Time, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1563,7 +1653,15 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
+
+				// Integer
+
+				writeInteger(this.Age_At_Order_Time, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1587,7 +1685,9 @@ public class orderLine implements TalendJob {
 			sb.append(",Order_Type=" + Order_Type);
 			sb.append(",Order_Date=" + String.valueOf(Order_Date));
 			sb.append(",Delivery_Date=" + String.valueOf(Delivery_Date));
+			sb.append(",Customer_ID=" + Customer_ID);
 			sb.append(",Country=" + Country);
+			sb.append(",Age_At_Order_Time=" + String.valueOf(Age_At_Order_Time));
 			sb.append("]");
 
 			return sb.toString();
@@ -1692,6 +1792,12 @@ public class orderLine implements TalendJob {
 
 		public String getDelivery_Date() {
 			return this.Delivery_Date;
+		}
+
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
 		}
 
 		public String Country;
@@ -1828,6 +1934,8 @@ public class orderLine implements TalendJob {
 
 					this.Delivery_Date = readString(dis);
 
+					this.Customer_ID = readString(dis);
+
 					this.Country = readString(dis);
 
 				} catch (IOException e) {
@@ -1864,6 +1972,8 @@ public class orderLine implements TalendJob {
 					this.Order_Date = readString(dis);
 
 					this.Delivery_Date = readString(dis);
+
+					this.Customer_ID = readString(dis);
 
 					this.Country = readString(dis);
 
@@ -1917,6 +2027,10 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
 
 			} catch (IOException e) {
@@ -1966,6 +2080,10 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
 
 			} catch (IOException e) {
@@ -1988,6 +2106,7 @@ public class orderLine implements TalendJob {
 			sb.append(",Order_Type=" + Order_Type);
 			sb.append(",Order_Date=" + Order_Date);
 			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Customer_ID=" + Customer_ID);
 			sb.append(",Country=" + Country);
 			sb.append("]");
 
@@ -2091,6 +2210,12 @@ public class orderLine implements TalendJob {
 			return this.Delivery_Date;
 		}
 
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
 		public String Country;
 
 		public String getCountry() {
@@ -2153,6 +2278,7 @@ public class orderLine implements TalendJob {
 			other.Order_Type = this.Order_Type;
 			other.Order_Date = this.Order_Date;
 			other.Delivery_Date = this.Delivery_Date;
+			other.Customer_ID = this.Customer_ID;
 			other.Country = this.Country;
 
 		}
@@ -2292,6 +2418,8 @@ public class orderLine implements TalendJob {
 
 					this.Delivery_Date = readString(dis);
 
+					this.Customer_ID = readString(dis);
+
 					this.Country = readString(dis);
 
 				} catch (IOException e) {
@@ -2328,6 +2456,8 @@ public class orderLine implements TalendJob {
 					this.Order_Date = readString(dis);
 
 					this.Delivery_Date = readString(dis);
+
+					this.Customer_ID = readString(dis);
 
 					this.Country = readString(dis);
 
@@ -2381,6 +2511,10 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
 
 			} catch (IOException e) {
@@ -2430,6 +2564,10 @@ public class orderLine implements TalendJob {
 
 				// String
 
+				writeString(this.Customer_ID, dos);
+
+				// String
+
 				writeString(this.Country, dos);
 
 			} catch (IOException e) {
@@ -2452,6 +2590,7 @@ public class orderLine implements TalendJob {
 			sb.append(",Order_Type=" + Order_Type);
 			sb.append(",Order_Date=" + Order_Date);
 			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Customer_ID=" + Customer_ID);
 			sb.append(",Country=" + Country);
 			sb.append("]");
 
@@ -3197,6 +3336,703 @@ public class orderLine implements TalendJob {
 
 	}
 
+	public static class after_tFileInputDelimited_1Struct
+			implements routines.system.IPersistableRow<after_tFileInputDelimited_1Struct> {
+		final static byte[] commonByteArrayLock_PROJETSID_orderLine = new byte[0];
+		static byte[] commonByteArray_PROJETSID_orderLine = new byte[0];
+
+		public String Customer_Group_ID;
+
+		public String getCustomer_Group_ID() {
+			return this.Customer_Group_ID;
+		}
+
+		public String Customer_Group;
+
+		public String getCustomer_Group() {
+			return this.Customer_Group;
+		}
+
+		public String Customer_Type_ID;
+
+		public String getCustomer_Type_ID() {
+			return this.Customer_Type_ID;
+		}
+
+		public String Customer_Type;
+
+		public String getCustomer_Type() {
+			return this.Customer_Type;
+		}
+
+		public String Birth_Date;
+
+		public String getBirth_Date() {
+			return this.Birth_Date;
+		}
+
+		public Character Gender;
+
+		public Character getGender() {
+			return this.Gender;
+		}
+
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
+		public String Country;
+
+		public String getCountry() {
+			return this.Country;
+		}
+
+		public String Country_Name;
+
+		public String getCountry_Name() {
+			return this.Country_Name;
+		}
+
+		public String Employee_ID;
+
+		public String getEmployee_ID() {
+			return this.Employee_ID;
+		}
+
+		public String Employee_Job_Title;
+
+		public String getEmployee_Job_Title() {
+			return this.Employee_Job_Title;
+		}
+
+		public Integer Employee_Salary;
+
+		public Integer getEmployee_Salary() {
+			return this.Employee_Salary;
+		}
+
+		public String Employee_Gender;
+
+		public String getEmployee_Gender() {
+			return this.Employee_Gender;
+		}
+
+		public String Employee_Country;
+
+		public String getEmployee_Country() {
+			return this.Employee_Country;
+		}
+
+		public String Order_Type;
+
+		public String getOrder_Type() {
+			return this.Order_Type;
+		}
+
+		public String Order_Date;
+
+		public String getOrder_Date() {
+			return this.Order_Date;
+		}
+
+		public String Delivery_Date;
+
+		public String getDelivery_Date() {
+			return this.Delivery_Date;
+		}
+
+		public String Product_ID;
+
+		public String getProduct_ID() {
+			return this.Product_ID;
+		}
+
+		public String Product_Name;
+
+		public String getProduct_Name() {
+			return this.Product_Name;
+		}
+
+		public String Product_Ref_ID;
+
+		public String getProduct_Ref_ID() {
+			return this.Product_Ref_ID;
+		}
+
+		public Integer Quantity;
+
+		public Integer getQuantity() {
+			return this.Quantity;
+		}
+
+		public String Order_ID;
+
+		public String getOrder_ID() {
+			return this.Order_ID;
+		}
+
+		public String Order_Item_Num;
+
+		public String getOrder_Item_Num() {
+			return this.Order_Item_Num;
+		}
+
+		public String CostPrice_Per_Unit;
+
+		public String getCostPrice_Per_Unit() {
+			return this.CostPrice_Per_Unit;
+		}
+
+		public String Total_Retail_Price;
+
+		public String getTotal_Retail_Price() {
+			return this.Total_Retail_Price;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_PROJETSID_orderLine.length) {
+					if (length < 1024 && commonByteArray_PROJETSID_orderLine.length == 0) {
+						commonByteArray_PROJETSID_orderLine = new byte[1024];
+					} else {
+						commonByteArray_PROJETSID_orderLine = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_PROJETSID_orderLine, 0, length);
+				strReturn = new String(commonByteArray_PROJETSID_orderLine, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private String readString(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = unmarshaller.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_PROJETSID_orderLine.length) {
+					if (length < 1024 && commonByteArray_PROJETSID_orderLine.length == 0) {
+						commonByteArray_PROJETSID_orderLine = new byte[1024];
+					} else {
+						commonByteArray_PROJETSID_orderLine = new byte[2 * length];
+					}
+				}
+				unmarshaller.readFully(commonByteArray_PROJETSID_orderLine, 0, length);
+				strReturn = new String(commonByteArray_PROJETSID_orderLine, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private void writeString(String str, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (str == null) {
+				marshaller.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				marshaller.writeInt(byteArray.length);
+				marshaller.write(byteArray);
+			}
+		}
+
+		private Integer readInteger(ObjectInputStream dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private Integer readInteger(org.jboss.marshalling.Unmarshaller dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
+		}
+
+		private void writeInteger(Integer intNum, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (intNum == null) {
+				marshaller.writeByte(-1);
+			} else {
+				marshaller.writeByte(0);
+				marshaller.writeInt(intNum);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_PROJETSID_orderLine) {
+
+				try {
+
+					int length = 0;
+
+					this.Customer_Group_ID = readString(dis);
+
+					this.Customer_Group = readString(dis);
+
+					this.Customer_Type_ID = readString(dis);
+
+					this.Customer_Type = readString(dis);
+
+					this.Birth_Date = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.Gender = null;
+					} else {
+						this.Gender = dis.readChar();
+					}
+
+					this.Customer_ID = readString(dis);
+
+					this.Country = readString(dis);
+
+					this.Country_Name = readString(dis);
+
+					this.Employee_ID = readString(dis);
+
+					this.Employee_Job_Title = readString(dis);
+
+					this.Employee_Salary = readInteger(dis);
+
+					this.Employee_Gender = readString(dis);
+
+					this.Employee_Country = readString(dis);
+
+					this.Order_Type = readString(dis);
+
+					this.Order_Date = readString(dis);
+
+					this.Delivery_Date = readString(dis);
+
+					this.Product_ID = readString(dis);
+
+					this.Product_Name = readString(dis);
+
+					this.Product_Ref_ID = readString(dis);
+
+					this.Quantity = readInteger(dis);
+
+					this.Order_ID = readString(dis);
+
+					this.Order_Item_Num = readString(dis);
+
+					this.CostPrice_Per_Unit = readString(dis);
+
+					this.Total_Retail_Price = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void readData(org.jboss.marshalling.Unmarshaller dis) {
+
+			synchronized (commonByteArrayLock_PROJETSID_orderLine) {
+
+				try {
+
+					int length = 0;
+
+					this.Customer_Group_ID = readString(dis);
+
+					this.Customer_Group = readString(dis);
+
+					this.Customer_Type_ID = readString(dis);
+
+					this.Customer_Type = readString(dis);
+
+					this.Birth_Date = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.Gender = null;
+					} else {
+						this.Gender = dis.readChar();
+					}
+
+					this.Customer_ID = readString(dis);
+
+					this.Country = readString(dis);
+
+					this.Country_Name = readString(dis);
+
+					this.Employee_ID = readString(dis);
+
+					this.Employee_Job_Title = readString(dis);
+
+					this.Employee_Salary = readInteger(dis);
+
+					this.Employee_Gender = readString(dis);
+
+					this.Employee_Country = readString(dis);
+
+					this.Order_Type = readString(dis);
+
+					this.Order_Date = readString(dis);
+
+					this.Delivery_Date = readString(dis);
+
+					this.Product_ID = readString(dis);
+
+					this.Product_Name = readString(dis);
+
+					this.Product_Ref_ID = readString(dis);
+
+					this.Quantity = readInteger(dis);
+
+					this.Order_ID = readString(dis);
+
+					this.Order_Item_Num = readString(dis);
+
+					this.CostPrice_Per_Unit = readString(dis);
+
+					this.Total_Retail_Price = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Customer_Group_ID, dos);
+
+				// String
+
+				writeString(this.Customer_Group, dos);
+
+				// String
+
+				writeString(this.Customer_Type_ID, dos);
+
+				// String
+
+				writeString(this.Customer_Type, dos);
+
+				// String
+
+				writeString(this.Birth_Date, dos);
+
+				// Character
+
+				if (this.Gender == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeChar(this.Gender);
+				}
+
+				// String
+
+				writeString(this.Customer_ID, dos);
+
+				// String
+
+				writeString(this.Country, dos);
+
+				// String
+
+				writeString(this.Country_Name, dos);
+
+				// String
+
+				writeString(this.Employee_ID, dos);
+
+				// String
+
+				writeString(this.Employee_Job_Title, dos);
+
+				// Integer
+
+				writeInteger(this.Employee_Salary, dos);
+
+				// String
+
+				writeString(this.Employee_Gender, dos);
+
+				// String
+
+				writeString(this.Employee_Country, dos);
+
+				// String
+
+				writeString(this.Order_Type, dos);
+
+				// String
+
+				writeString(this.Order_Date, dos);
+
+				// String
+
+				writeString(this.Delivery_Date, dos);
+
+				// String
+
+				writeString(this.Product_ID, dos);
+
+				// String
+
+				writeString(this.Product_Name, dos);
+
+				// String
+
+				writeString(this.Product_Ref_ID, dos);
+
+				// Integer
+
+				writeInteger(this.Quantity, dos);
+
+				// String
+
+				writeString(this.Order_ID, dos);
+
+				// String
+
+				writeString(this.Order_Item_Num, dos);
+
+				// String
+
+				writeString(this.CostPrice_Per_Unit, dos);
+
+				// String
+
+				writeString(this.Total_Retail_Price, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public void writeData(org.jboss.marshalling.Marshaller dos) {
+			try {
+
+				// String
+
+				writeString(this.Customer_Group_ID, dos);
+
+				// String
+
+				writeString(this.Customer_Group, dos);
+
+				// String
+
+				writeString(this.Customer_Type_ID, dos);
+
+				// String
+
+				writeString(this.Customer_Type, dos);
+
+				// String
+
+				writeString(this.Birth_Date, dos);
+
+				// Character
+
+				if (this.Gender == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeChar(this.Gender);
+				}
+
+				// String
+
+				writeString(this.Customer_ID, dos);
+
+				// String
+
+				writeString(this.Country, dos);
+
+				// String
+
+				writeString(this.Country_Name, dos);
+
+				// String
+
+				writeString(this.Employee_ID, dos);
+
+				// String
+
+				writeString(this.Employee_Job_Title, dos);
+
+				// Integer
+
+				writeInteger(this.Employee_Salary, dos);
+
+				// String
+
+				writeString(this.Employee_Gender, dos);
+
+				// String
+
+				writeString(this.Employee_Country, dos);
+
+				// String
+
+				writeString(this.Order_Type, dos);
+
+				// String
+
+				writeString(this.Order_Date, dos);
+
+				// String
+
+				writeString(this.Delivery_Date, dos);
+
+				// String
+
+				writeString(this.Product_ID, dos);
+
+				// String
+
+				writeString(this.Product_Name, dos);
+
+				// String
+
+				writeString(this.Product_Ref_ID, dos);
+
+				// Integer
+
+				writeInteger(this.Quantity, dos);
+
+				// String
+
+				writeString(this.Order_ID, dos);
+
+				// String
+
+				writeString(this.Order_Item_Num, dos);
+
+				// String
+
+				writeString(this.CostPrice_Per_Unit, dos);
+
+				// String
+
+				writeString(this.Total_Retail_Price, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Customer_Group_ID=" + Customer_Group_ID);
+			sb.append(",Customer_Group=" + Customer_Group);
+			sb.append(",Customer_Type_ID=" + Customer_Type_ID);
+			sb.append(",Customer_Type=" + Customer_Type);
+			sb.append(",Birth_Date=" + Birth_Date);
+			sb.append(",Gender=" + String.valueOf(Gender));
+			sb.append(",Customer_ID=" + Customer_ID);
+			sb.append(",Country=" + Country);
+			sb.append(",Country_Name=" + Country_Name);
+			sb.append(",Employee_ID=" + Employee_ID);
+			sb.append(",Employee_Job_Title=" + Employee_Job_Title);
+			sb.append(",Employee_Salary=" + String.valueOf(Employee_Salary));
+			sb.append(",Employee_Gender=" + Employee_Gender);
+			sb.append(",Employee_Country=" + Employee_Country);
+			sb.append(",Order_Type=" + Order_Type);
+			sb.append(",Order_Date=" + Order_Date);
+			sb.append(",Delivery_Date=" + Delivery_Date);
+			sb.append(",Product_ID=" + Product_ID);
+			sb.append(",Product_Name=" + Product_Name);
+			sb.append(",Product_Ref_ID=" + Product_Ref_ID);
+			sb.append(",Quantity=" + String.valueOf(Quantity));
+			sb.append(",Order_ID=" + Order_ID);
+			sb.append(",Order_Item_Num=" + Order_Item_Num);
+			sb.append(",CostPrice_Per_Unit=" + CostPrice_Per_Unit);
+			sb.append(",Total_Retail_Price=" + Total_Retail_Price);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(after_tFileInputDelimited_1Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
 	public void tFileInputDelimited_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
 		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 0);
 
@@ -3216,6 +4052,8 @@ public class orderLine implements TalendJob {
 			}
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
+
+				tFileInputDelimited_2Process(globalMap);
 
 				row5Struct row5 = new row5Struct();
 				row6Struct row6 = new row6Struct();
@@ -3327,7 +4165,11 @@ public class orderLine implements TalendJob {
 					outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
 					outtFileOutputDelimited_1.write("Delivery_Date");
 					outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
+					outtFileOutputDelimited_1.write("Customer_ID");
+					outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
 					outtFileOutputDelimited_1.write("Country");
+					outtFileOutputDelimited_1.write(OUT_DELIM_tFileOutputDelimited_1);
+					outtFileOutputDelimited_1.write("Age_At_Order_Time");
 					outtFileOutputDelimited_1.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
 					outtFileOutputDelimited_1.flush();
 				}
@@ -3354,15 +4196,6 @@ public class orderLine implements TalendJob {
 
 				int tos_count_tLogRow_1 = 0;
 
-				///////////////////////
-
-				final String OUTPUT_FIELD_SEPARATOR_tLogRow_1 = "|";
-				java.io.PrintStream consoleOut_tLogRow_1 = null;
-
-				StringBuilder strBuffer_tLogRow_1 = null;
-				int nb_line_tLogRow_1 = 0;
-///////////////////////    			
-
 				/**
 				 * [tLogRow_1 begin ] stop
 				 */
@@ -3384,6 +4217,12 @@ public class orderLine implements TalendJob {
 
 // ###############################
 // # Lookup's keys initialization
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct> tHash_Lookup_row2 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct>) globalMap
+						.get("tHash_Lookup_row2"));
+
+				row2Struct row2HashKey = new row2Struct();
+				row2Struct row2Default = new row2Struct();
 // ###############################        
 
 // ###############################
@@ -3395,6 +4234,7 @@ public class orderLine implements TalendJob {
 					java.util.Date deliveryDate;
 					float Product_Price_Per_Unit;
 					float Marge_Per_Unit;
+					Integer ageClass;
 				}
 				Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
 // ###############################
@@ -4191,6 +5031,8 @@ public class orderLine implements TalendJob {
 
 							row6.Delivery_Date = row5.Delivery_Date;
 
+							row6.Customer_ID = row5.Customer_ID;
+
 							row6.Country = row5.Country;
 
 							nb_line_tFilterColumns_1++;
@@ -4265,6 +5107,7 @@ public class orderLine implements TalendJob {
 								row1.Order_Type = row6.Order_Type;
 								row1.Order_Date = row6.Order_Date;
 								row1.Delivery_Date = row6.Delivery_Date;
+								row1.Customer_ID = row6.Customer_ID;
 								row1.Country = row6.Country;
 								nb_uniques_tUniqRow_1++;
 							} else {
@@ -4310,6 +5153,48 @@ public class orderLine implements TalendJob {
 								boolean rejectedInnerJoin_tMap_1 = false;
 								boolean mainRowRejected_tMap_1 = false;
 
+								///////////////////////////////////////////////
+								// Starting Lookup Table "row2"
+								///////////////////////////////////////////////
+
+								boolean forceLooprow2 = false;
+
+								row2Struct row2ObjectFromLookup = null;
+
+								if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+									hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+									row2HashKey.Customer_ID = row1.Customer_ID;
+
+									row2HashKey.hashCodeDirty = true;
+
+									tHash_Lookup_row2.lookup(row2HashKey);
+
+								} // G_TM_M_020
+
+								if (tHash_Lookup_row2 != null && tHash_Lookup_row2.getCount(row2HashKey) > 1) { // G 071
+
+									// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row2'
+									// and it contains more one result from keys : row2.Customer_ID = '" +
+									// row2HashKey.Customer_ID + "'");
+								} // G 071
+
+								row2Struct row2 = null;
+
+								row2Struct fromLookup_row2 = null;
+								row2 = row2Default;
+
+								if (tHash_Lookup_row2 != null && tHash_Lookup_row2.hasNext()) { // G 099
+
+									fromLookup_row2 = tHash_Lookup_row2.next();
+
+								} // G 099
+
+								if (fromLookup_row2 != null) {
+									row2 = fromLookup_row2;
+								}
+
 								// ###############################
 								{ // start of Var scope
 
@@ -4330,7 +5215,9 @@ public class orderLine implements TalendJob {
 													+ "/" + row1.Delivery_Date.split(" ")[2]);
 									;
 									Var.Product_Price_Per_Unit = Var.total / row1.Quantity;
-									Var.Marge_Per_Unit = Var.Product_Price_Per_Unit - Var.cost;// ###############################
+									Var.Marge_Per_Unit = Var.Product_Price_Per_Unit - Var.cost;
+									Var.ageClass = fonctionsPerso.getDecadeAtOrderTime(row1.Order_Date,
+											row2.Birth_Years);// ###############################
 									// ###############################
 									// # Output tables
 
@@ -4348,7 +5235,9 @@ public class orderLine implements TalendJob {
 									order_tmp.Order_Type = row1.Order_Type;
 									order_tmp.Order_Date = Var.orderDate;
 									order_tmp.Delivery_Date = Var.deliveryDate;
+									order_tmp.Customer_ID = row1.Customer_ID;
 									order_tmp.Country = row1.Country;
+									order_tmp.Age_At_Order_Time = Var.ageClass;
 									order = order_tmp;
 // ###############################
 
@@ -4387,125 +5276,6 @@ public class orderLine implements TalendJob {
 
 										);
 									}
-
-///////////////////////		
-
-									strBuffer_tLogRow_1 = new StringBuilder();
-
-									if (order.Order_ID != null) { //
-
-										strBuffer_tLogRow_1.append(String.valueOf(order.Order_ID));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Order_Item_Num != null) { //
-
-										strBuffer_tLogRow_1.append(String.valueOf(order.Order_Item_Num));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Product_ID != null) { //
-
-										strBuffer_tLogRow_1.append(String.valueOf(order.Product_ID));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Quantity != null) { //
-
-										strBuffer_tLogRow_1.append(String.valueOf(order.Quantity));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Product_Price_Per_Unit != null) { //
-
-										strBuffer_tLogRow_1
-												.append(FormatterUtils.formatUnwithE(order.Product_Price_Per_Unit));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Total_Retail_Price != null) { //
-
-										strBuffer_tLogRow_1
-												.append(FormatterUtils.formatUnwithE(order.Total_Retail_Price));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.CostPrice_Per_Unit != null) { //
-
-										strBuffer_tLogRow_1
-												.append(FormatterUtils.formatUnwithE(order.CostPrice_Per_Unit));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Marge_Per_Unit != null) { //
-
-										strBuffer_tLogRow_1.append(FormatterUtils.formatUnwithE(order.Marge_Per_Unit));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Order_Type != null) { //
-
-										strBuffer_tLogRow_1.append(String.valueOf(order.Order_Type));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Order_Date != null) { //
-
-										strBuffer_tLogRow_1
-												.append(FormatterUtils.format_Date(order.Order_Date, "dd-MM-yyyy"));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Delivery_Date != null) { //
-
-										strBuffer_tLogRow_1
-												.append(FormatterUtils.format_Date(order.Delivery_Date, "dd-MM-yyyy"));
-
-									} //
-
-									strBuffer_tLogRow_1.append("|");
-
-									if (order.Country != null) { //
-
-										strBuffer_tLogRow_1.append(String.valueOf(order.Country));
-
-									} //
-
-									if (globalMap.get("tLogRow_CONSOLE") != null) {
-										consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-									} else {
-										consoleOut_tLogRow_1 = new java.io.PrintStream(
-												new java.io.BufferedOutputStream(System.out));
-										globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_1);
-									}
-									consoleOut_tLogRow_1.println(strBuffer_tLogRow_1.toString());
-									consoleOut_tLogRow_1.flush();
-									nb_line_tLogRow_1++;
-//////
-
-//////                    
-
-///////////////////////    			
 
 									row8 = order;
 
@@ -4586,8 +5356,16 @@ public class orderLine implements TalendJob {
 												.append(FormatterUtils.format_Date(row8.Delivery_Date, "dd-MM-yyyy"));
 									}
 									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+									if (row8.Customer_ID != null) {
+										sb_tFileOutputDelimited_1.append(row8.Customer_ID);
+									}
+									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
 									if (row8.Country != null) {
 										sb_tFileOutputDelimited_1.append(row8.Country);
+									}
+									sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+									if (row8.Age_At_Order_Time != null) {
+										sb_tFileOutputDelimited_1.append(row8.Age_At_Order_Time);
 									}
 									sb_tFileOutputDelimited_1.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
 
@@ -4752,6 +5530,11 @@ public class orderLine implements TalendJob {
 
 // ###############################
 // # Lookup hashes releasing
+				if (tHash_Lookup_row2 != null) {
+					tHash_Lookup_row2.endGet();
+				}
+				globalMap.remove("tHash_Lookup_row2");
+
 // ###############################      
 
 				if (execStat) {
@@ -4770,12 +5553,6 @@ public class orderLine implements TalendJob {
 				 */
 
 				currentComponent = "tLogRow_1";
-
-//////
-//////
-				globalMap.put("tLogRow_1_NB_LINE", nb_line_tLogRow_1);
-
-///////////////////////    			
 
 				if (execStat) {
 					runStat.updateStat(resourceMap, iterateId, 2, 0, "order");
@@ -4828,6 +5605,9 @@ public class orderLine implements TalendJob {
 
 			throw error;
 		} finally {
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_row2");
 
 			try {
 
@@ -4913,6 +5693,1005 @@ public class orderLine implements TalendJob {
 		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 1);
 	}
 
+	public static class row2Struct implements routines.system.IPersistableComparableLookupRow<row2Struct> {
+		final static byte[] commonByteArrayLock_PROJETSID_orderLine = new byte[0];
+		static byte[] commonByteArray_PROJETSID_orderLine = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Customer_ID;
+
+		public String getCustomer_ID() {
+			return this.Customer_ID;
+		}
+
+		public Character Gender;
+
+		public Character getGender() {
+			return this.Gender;
+		}
+
+		public Integer Birth_Years;
+
+		public Integer getBirth_Years() {
+			return this.Birth_Years;
+		}
+
+		public String Customer_Type_ID;
+
+		public String getCustomer_Type_ID() {
+			return this.Customer_Type_ID;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime * result + ((this.Customer_ID == null) ? 0 : this.Customer_ID.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row2Struct other = (row2Struct) obj;
+
+			if (this.Customer_ID == null) {
+				if (other.Customer_ID != null)
+					return false;
+
+			} else if (!this.Customer_ID.equals(other.Customer_ID))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row2Struct other) {
+
+			other.Customer_ID = this.Customer_ID;
+			other.Gender = this.Gender;
+			other.Birth_Years = this.Birth_Years;
+			other.Customer_Type_ID = this.Customer_Type_ID;
+
+		}
+
+		public void copyKeysDataTo(row2Struct other) {
+
+			other.Customer_ID = this.Customer_ID;
+
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_PROJETSID_orderLine.length) {
+					if (length < 1024 && commonByteArray_PROJETSID_orderLine.length == 0) {
+						commonByteArray_PROJETSID_orderLine = new byte[1024];
+					} else {
+						commonByteArray_PROJETSID_orderLine = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_PROJETSID_orderLine, 0, length);
+				strReturn = new String(commonByteArray_PROJETSID_orderLine, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private String readString(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = unmarshaller.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_PROJETSID_orderLine.length) {
+					if (length < 1024 && commonByteArray_PROJETSID_orderLine.length == 0) {
+						commonByteArray_PROJETSID_orderLine = new byte[1024];
+					} else {
+						commonByteArray_PROJETSID_orderLine = new byte[2 * length];
+					}
+				}
+				unmarshaller.readFully(commonByteArray_PROJETSID_orderLine, 0, length);
+				strReturn = new String(commonByteArray_PROJETSID_orderLine, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private void writeString(String str, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (str == null) {
+				marshaller.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				marshaller.writeInt(byteArray.length);
+				marshaller.write(byteArray);
+			}
+		}
+
+		private Integer readInteger(DataInputStream dis, ObjectInputStream ois) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private Integer readInteger(DataInputStream dis, org.jboss.marshalling.Unmarshaller unmarshaller)
+				throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = unmarshaller.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = unmarshaller.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, DataOutputStream dos, ObjectOutputStream oos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
+		}
+
+		private void writeInteger(Integer intNum, DataOutputStream dos, org.jboss.marshalling.Marshaller marshaller)
+				throws IOException {
+			if (intNum == null) {
+				marshaller.writeByte(-1);
+			} else {
+				marshaller.writeByte(0);
+				marshaller.writeInt(intNum);
+			}
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private String readString(DataInputStream dis, org.jboss.marshalling.Unmarshaller unmarshaller)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = unmarshaller.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				unmarshaller.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos, org.jboss.marshalling.Marshaller marshaller)
+				throws IOException {
+			if (str == null) {
+				marshaller.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				marshaller.writeInt(byteArray.length);
+				marshaller.write(byteArray);
+			}
+		}
+
+		private void writeString(String str, DataOutputStream dos, ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_PROJETSID_orderLine) {
+
+				try {
+
+					int length = 0;
+
+					this.Customer_ID = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void readKeysData(org.jboss.marshalling.Unmarshaller dis) {
+
+			synchronized (commonByteArrayLock_PROJETSID_orderLine) {
+
+				try {
+
+					int length = 0;
+
+					this.Customer_ID = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Customer_ID, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public void writeKeysData(org.jboss.marshalling.Marshaller dos) {
+			try {
+
+				// String
+
+				writeString(this.Customer_ID, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				length = dis.readByte();
+				if (length == -1) {
+					this.Gender = null;
+				} else {
+					this.Gender = dis.readChar();
+				}
+
+				this.Birth_Years = readInteger(dis, ois);
+
+				this.Customer_Type_ID = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		public void readValuesData(DataInputStream dis, org.jboss.marshalling.Unmarshaller objectIn) {
+			try {
+				int length = 0;
+
+				length = objectIn.readByte();
+				if (length == -1) {
+					this.Gender = null;
+				} else {
+					this.Gender = objectIn.readChar();
+				}
+
+				this.Birth_Years = readInteger(dis, objectIn);
+
+				this.Customer_Type_ID = readString(dis, objectIn);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				if (this.Gender == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeChar(this.Gender);
+				}
+
+				writeInteger(this.Birth_Years, dos, oos);
+
+				writeString(this.Customer_Type_ID, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public void writeValuesData(DataOutputStream dos, org.jboss.marshalling.Marshaller objectOut) {
+			try {
+
+				if (this.Gender == null) {
+					objectOut.writeByte(-1);
+				} else {
+					objectOut.writeByte(0);
+					objectOut.writeChar(this.Gender);
+				}
+
+				writeInteger(this.Birth_Years, dos, objectOut);
+
+				writeString(this.Customer_Type_ID, dos, objectOut);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}
+
+		public boolean supportMarshaller() {
+			return true;
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Customer_ID=" + Customer_ID);
+			sb.append(",Gender=" + String.valueOf(Gender));
+			sb.append(",Birth_Years=" + String.valueOf(Birth_Years));
+			sb.append(",Customer_Type_ID=" + Customer_Type_ID);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row2Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.Customer_ID, other.Customer_ID);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tFileInputDelimited_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tFileInputDelimited_2_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row2Struct row2 = new row2Struct();
+
+				/**
+				 * [tAdvancedHash_row2 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row2", false);
+				start_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row2";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row2");
+				}
+
+				int tos_count_tAdvancedHash_row2 = 0;
+
+				// connection name:row2
+				// source node:tFileInputDelimited_2 - inputs:(after_tFileInputDelimited_1)
+				// outputs:(row2,row2) | target node:tAdvancedHash_row2 - inputs:(row2)
+				// outputs:()
+				// linked node: tMap_1 - inputs:(row1,row2) outputs:(order)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row2 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row2Struct> tHash_Lookup_row2 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row2Struct>getLookup(matchingModeEnum_row2);
+
+				globalMap.put("tHash_Lookup_row2", tHash_Lookup_row2);
+
+				/**
+				 * [tAdvancedHash_row2 begin ] stop
+				 */
+
+				/**
+				 * [tFileInputDelimited_2 begin ] start
+				 */
+
+				ok_Hash.put("tFileInputDelimited_2", false);
+				start_Hash.put("tFileInputDelimited_2", System.currentTimeMillis());
+
+				currentComponent = "tFileInputDelimited_2";
+
+				int tos_count_tFileInputDelimited_2 = 0;
+
+				final routines.system.RowState rowstate_tFileInputDelimited_2 = new routines.system.RowState();
+
+				int nb_line_tFileInputDelimited_2 = 0;
+				int footer_tFileInputDelimited_2 = 1;
+				int totalLinetFileInputDelimited_2 = 0;
+				int limittFileInputDelimited_2 = -1;
+				int lastLinetFileInputDelimited_2 = -1;
+
+				char fieldSeparator_tFileInputDelimited_2[] = null;
+
+				// support passing value (property: Field Separator) by 'context.fs' or
+				// 'globalMap.get("fs")'.
+				if (((String) ";").length() > 0) {
+					fieldSeparator_tFileInputDelimited_2 = ((String) ";").toCharArray();
+				} else {
+					throw new IllegalArgumentException("Field Separator must be assigned a char.");
+				}
+
+				char rowSeparator_tFileInputDelimited_2[] = null;
+
+				// support passing value (property: Row Separator) by 'context.rs' or
+				// 'globalMap.get("rs")'.
+				if (((String) "\n").length() > 0) {
+					rowSeparator_tFileInputDelimited_2 = ((String) "\n").toCharArray();
+				} else {
+					throw new IllegalArgumentException("Row Separator must be assigned a char.");
+				}
+
+				Object filename_tFileInputDelimited_2 = /** Start field tFileInputDelimited_2:FILENAME */
+						"/home/aliceb/miage/sid/TOS/workspace/PROJETSID/files/TablesToDump/Customer.csv"/**
+																										 * End field
+																										 * tFileInputDelimited_2:FILENAME
+																										 */
+				;
+				com.talend.csv.CSVReader csvReadertFileInputDelimited_2 = null;
+
+				try {
+
+					String[] rowtFileInputDelimited_2 = null;
+					int currentLinetFileInputDelimited_2 = 0;
+					int outputLinetFileInputDelimited_2 = 0;
+					try {// TD110 begin
+						if (filename_tFileInputDelimited_2 instanceof java.io.InputStream) {
+
+							int footer_value_tFileInputDelimited_2 = 1;
+							if (footer_value_tFileInputDelimited_2 > 0) {
+								throw new java.lang.Exception(
+										"When the input source is a stream,footer shouldn't be bigger than 0.");
+							}
+
+							csvReadertFileInputDelimited_2 = new com.talend.csv.CSVReader(
+									(java.io.InputStream) filename_tFileInputDelimited_2,
+									fieldSeparator_tFileInputDelimited_2[0], "ISO-8859-15");
+						} else {
+							csvReadertFileInputDelimited_2 = new com.talend.csv.CSVReader(
+									String.valueOf(filename_tFileInputDelimited_2),
+									fieldSeparator_tFileInputDelimited_2[0], "ISO-8859-15");
+						}
+
+						csvReadertFileInputDelimited_2.setTrimWhitespace(false);
+						if ((rowSeparator_tFileInputDelimited_2[0] != '\n')
+								&& (rowSeparator_tFileInputDelimited_2[0] != '\r'))
+							csvReadertFileInputDelimited_2.setLineEnd("" + rowSeparator_tFileInputDelimited_2[0]);
+
+						csvReadertFileInputDelimited_2.setQuoteChar('"');
+
+						csvReadertFileInputDelimited_2.setEscapeChar(csvReadertFileInputDelimited_2.getQuoteChar());
+
+						if (footer_tFileInputDelimited_2 > 0) {
+							for (totalLinetFileInputDelimited_2 = 0; totalLinetFileInputDelimited_2 < 1; totalLinetFileInputDelimited_2++) {
+								csvReadertFileInputDelimited_2.readNext();
+							}
+							csvReadertFileInputDelimited_2.setSkipEmptyRecords(true);
+							while (csvReadertFileInputDelimited_2.readNext()) {
+
+								rowtFileInputDelimited_2 = csvReadertFileInputDelimited_2.getValues();
+								if (!(rowtFileInputDelimited_2.length == 1
+										&& ("\015").equals(rowtFileInputDelimited_2[0]))) {// empty line when row
+																							// separator is '\n'
+
+									totalLinetFileInputDelimited_2++;
+
+								}
+
+							}
+							int lastLineTemptFileInputDelimited_2 = totalLinetFileInputDelimited_2
+									- footer_tFileInputDelimited_2 < 0 ? 0
+											: totalLinetFileInputDelimited_2 - footer_tFileInputDelimited_2;
+							if (lastLinetFileInputDelimited_2 > 0) {
+								lastLinetFileInputDelimited_2 = lastLinetFileInputDelimited_2 < lastLineTemptFileInputDelimited_2
+										? lastLinetFileInputDelimited_2
+										: lastLineTemptFileInputDelimited_2;
+							} else {
+								lastLinetFileInputDelimited_2 = lastLineTemptFileInputDelimited_2;
+							}
+
+							csvReadertFileInputDelimited_2.close();
+							if (filename_tFileInputDelimited_2 instanceof java.io.InputStream) {
+								csvReadertFileInputDelimited_2 = new com.talend.csv.CSVReader(
+										(java.io.InputStream) filename_tFileInputDelimited_2,
+										fieldSeparator_tFileInputDelimited_2[0], "ISO-8859-15");
+							} else {
+								csvReadertFileInputDelimited_2 = new com.talend.csv.CSVReader(
+										String.valueOf(filename_tFileInputDelimited_2),
+										fieldSeparator_tFileInputDelimited_2[0], "ISO-8859-15");
+							}
+							csvReadertFileInputDelimited_2.setTrimWhitespace(false);
+							if ((rowSeparator_tFileInputDelimited_2[0] != '\n')
+									&& (rowSeparator_tFileInputDelimited_2[0] != '\r'))
+								csvReadertFileInputDelimited_2.setLineEnd("" + rowSeparator_tFileInputDelimited_2[0]);
+
+							csvReadertFileInputDelimited_2.setQuoteChar('"');
+
+							csvReadertFileInputDelimited_2.setEscapeChar(csvReadertFileInputDelimited_2.getQuoteChar());
+
+						}
+
+						if (limittFileInputDelimited_2 != 0) {
+							for (currentLinetFileInputDelimited_2 = 0; currentLinetFileInputDelimited_2 < 1; currentLinetFileInputDelimited_2++) {
+								csvReadertFileInputDelimited_2.readNext();
+							}
+						}
+						csvReadertFileInputDelimited_2.setSkipEmptyRecords(true);
+
+					} catch (java.lang.Exception e) {
+						globalMap.put("tFileInputDelimited_2_ERROR_MESSAGE", e.getMessage());
+
+						System.err.println(e.getMessage());
+
+					} // TD110 end
+
+					while (limittFileInputDelimited_2 != 0 && csvReadertFileInputDelimited_2 != null
+							&& csvReadertFileInputDelimited_2.readNext()) {
+						rowstate_tFileInputDelimited_2.reset();
+
+						rowtFileInputDelimited_2 = csvReadertFileInputDelimited_2.getValues();
+
+						if (rowtFileInputDelimited_2.length == 1 && ("\015").equals(rowtFileInputDelimited_2[0])) {// empty
+																													// line
+																													// when
+																													// row
+																													// separator
+																													// is
+																													// '\n'
+							continue;
+						}
+
+						currentLinetFileInputDelimited_2++;
+
+						if (lastLinetFileInputDelimited_2 > -1
+								&& currentLinetFileInputDelimited_2 > lastLinetFileInputDelimited_2) {
+							break;
+						}
+						outputLinetFileInputDelimited_2++;
+						if (limittFileInputDelimited_2 > 0
+								&& outputLinetFileInputDelimited_2 > limittFileInputDelimited_2) {
+							break;
+						}
+
+						row2 = null;
+
+						row2 = null;
+
+						boolean whetherReject_tFileInputDelimited_2 = false;
+						row2 = new row2Struct();
+						try {
+
+							char fieldSeparator_tFileInputDelimited_2_ListType[] = null;
+							// support passing value (property: Field Separator) by 'context.fs' or
+							// 'globalMap.get("fs")'.
+							if (((String) ";").length() > 0) {
+								fieldSeparator_tFileInputDelimited_2_ListType = ((String) ";").toCharArray();
+							} else {
+								throw new IllegalArgumentException("Field Separator must be assigned a char.");
+							}
+							if (rowtFileInputDelimited_2.length == 1 && ("\015").equals(rowtFileInputDelimited_2[0])) {// empty
+																														// line
+																														// when
+																														// row
+																														// separator
+																														// is
+																														// '\n'
+
+								row2.Customer_ID = null;
+
+								row2.Gender = null;
+
+								row2.Birth_Years = null;
+
+								row2.Customer_Type_ID = null;
+
+							} else {
+
+								int columnIndexWithD_tFileInputDelimited_2 = 0; // Column Index
+
+								columnIndexWithD_tFileInputDelimited_2 = 0;
+
+								if (columnIndexWithD_tFileInputDelimited_2 < rowtFileInputDelimited_2.length) {
+
+									row2.Customer_ID = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
+
+								} else {
+
+									row2.Customer_ID = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_2 = 1;
+
+								if (columnIndexWithD_tFileInputDelimited_2 < rowtFileInputDelimited_2.length) {
+
+									if (rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2].length() > 0) {
+										try {
+
+											row2.Gender = ParserUtils.parseTo_Character(
+													rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2]);
+
+										} catch (java.lang.Exception ex_tFileInputDelimited_2) {
+											globalMap.put("tFileInputDelimited_2_ERROR_MESSAGE",
+													ex_tFileInputDelimited_2.getMessage());
+											rowstate_tFileInputDelimited_2.setException(new RuntimeException(String
+													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"Gender", "row2",
+															rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2],
+															ex_tFileInputDelimited_2),
+													ex_tFileInputDelimited_2));
+										}
+									} else {
+
+										row2.Gender = null;
+
+									}
+
+								} else {
+
+									row2.Gender = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_2 = 2;
+
+								if (columnIndexWithD_tFileInputDelimited_2 < rowtFileInputDelimited_2.length) {
+
+									if (rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2].length() > 0) {
+										try {
+
+											row2.Birth_Years = ParserUtils.parseTo_Integer(
+													rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2]);
+
+										} catch (java.lang.Exception ex_tFileInputDelimited_2) {
+											globalMap.put("tFileInputDelimited_2_ERROR_MESSAGE",
+													ex_tFileInputDelimited_2.getMessage());
+											rowstate_tFileInputDelimited_2.setException(new RuntimeException(String
+													.format("Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"Birth_Years", "row2",
+															rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2],
+															ex_tFileInputDelimited_2),
+													ex_tFileInputDelimited_2));
+										}
+									} else {
+
+										row2.Birth_Years = null;
+
+									}
+
+								} else {
+
+									row2.Birth_Years = null;
+
+								}
+
+								columnIndexWithD_tFileInputDelimited_2 = 3;
+
+								if (columnIndexWithD_tFileInputDelimited_2 < rowtFileInputDelimited_2.length) {
+
+									row2.Customer_Type_ID = rowtFileInputDelimited_2[columnIndexWithD_tFileInputDelimited_2];
+
+								} else {
+
+									row2.Customer_Type_ID = null;
+
+								}
+
+							}
+
+							if (rowstate_tFileInputDelimited_2.getException() != null) {
+								throw rowstate_tFileInputDelimited_2.getException();
+							}
+
+						} catch (java.lang.Exception e) {
+							globalMap.put("tFileInputDelimited_2_ERROR_MESSAGE", e.getMessage());
+							whetherReject_tFileInputDelimited_2 = true;
+
+							System.err.println(e.getMessage());
+							row2 = null;
+
+							globalMap.put("tFileInputDelimited_2_ERROR_MESSAGE", e.getMessage());
+
+						}
+
+						/**
+						 * [tFileInputDelimited_2 begin ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_2 main ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_2";
+
+						tos_count_tFileInputDelimited_2++;
+
+						/**
+						 * [tFileInputDelimited_2 main ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_2 process_data_begin ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_2";
+
+						/**
+						 * [tFileInputDelimited_2 process_data_begin ] stop
+						 */
+// Start of branch "row2"
+						if (row2 != null) {
+
+							/**
+							 * [tAdvancedHash_row2 main ] start
+							 */
+
+							currentComponent = "tAdvancedHash_row2";
+
+							if (execStat) {
+								runStat.updateStatOnConnection(iterateId, 1, 1
+
+										, "row2"
+
+								);
+							}
+
+							row2Struct row2_HashRow = new row2Struct();
+
+							row2_HashRow.Customer_ID = row2.Customer_ID;
+
+							row2_HashRow.Gender = row2.Gender;
+
+							row2_HashRow.Birth_Years = row2.Birth_Years;
+
+							row2_HashRow.Customer_Type_ID = row2.Customer_Type_ID;
+
+							tHash_Lookup_row2.put(row2_HashRow);
+
+							tos_count_tAdvancedHash_row2++;
+
+							/**
+							 * [tAdvancedHash_row2 main ] stop
+							 */
+
+							/**
+							 * [tAdvancedHash_row2 process_data_begin ] start
+							 */
+
+							currentComponent = "tAdvancedHash_row2";
+
+							/**
+							 * [tAdvancedHash_row2 process_data_begin ] stop
+							 */
+
+							/**
+							 * [tAdvancedHash_row2 process_data_end ] start
+							 */
+
+							currentComponent = "tAdvancedHash_row2";
+
+							/**
+							 * [tAdvancedHash_row2 process_data_end ] stop
+							 */
+
+						} // End of branch "row2"
+
+						/**
+						 * [tFileInputDelimited_2 process_data_end ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_2";
+
+						/**
+						 * [tFileInputDelimited_2 process_data_end ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_2 end ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_2";
+
+						nb_line_tFileInputDelimited_2++;
+					}
+
+				} finally {
+					if (!(filename_tFileInputDelimited_2 instanceof java.io.InputStream)) {
+						if (csvReadertFileInputDelimited_2 != null) {
+							csvReadertFileInputDelimited_2.close();
+						}
+					}
+					if (csvReadertFileInputDelimited_2 != null) {
+						globalMap.put("tFileInputDelimited_2_NB_LINE", nb_line_tFileInputDelimited_2);
+					}
+
+				}
+
+				ok_Hash.put("tFileInputDelimited_2", true);
+				end_Hash.put("tFileInputDelimited_2", System.currentTimeMillis());
+
+				/**
+				 * [tFileInputDelimited_2 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row2 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row2";
+
+				tHash_Lookup_row2.endPut();
+
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row2");
+				}
+
+				ok_Hash.put("tAdvancedHash_row2", true);
+				end_Hash.put("tAdvancedHash_row2", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row2 end ] stop
+				 */
+
+			} // end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent, globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tFileInputDelimited_2 finally ] start
+				 */
+
+				currentComponent = "tFileInputDelimited_2";
+
+				/**
+				 * [tFileInputDelimited_2 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row2 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row2";
+
+				/**
+				 * [tAdvancedHash_row2 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tFileInputDelimited_2_SUBPROCESS_STATE", 1);
+	}
+
 	public String resuming_logs_dir_path = null;
 	public String resuming_checkpoint_path = null;
 	public String parent_part_launcher = null;
@@ -4925,7 +6704,7 @@ public class orderLine implements TalendJob {
 	public int portTraces = 4334;
 	public String clientHost;
 	public String defaultClientHost = "localhost";
-	public String contextStr = "jordan";
+	public String contextStr = "alice";
 	public boolean isDefaultContext = true;
 	public String pid = "0";
 	public String rootPid = null;
@@ -5289,6 +7068,6 @@ public class orderLine implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 149643 characters generated by Talend Open Studio for Data Integration on the
- * 10 mai 2024 à 13:25:18 CEST
+ * 197470 characters generated by Talend Open Studio for Data Integration on the
+ * 10 mai 2024 à 17:05:35 CEST
  ************************************************************************************************/

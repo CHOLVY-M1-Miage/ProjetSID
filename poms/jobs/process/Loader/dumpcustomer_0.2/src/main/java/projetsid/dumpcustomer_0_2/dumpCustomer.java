@@ -580,7 +580,7 @@ public class dumpCustomer implements TalendJob {
 				String dbUser_tDBConnection_1 = "casiop-sid-24-ajj";
 
 				final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword(
-						"enc:routine.encryption.key.v1:TniBkizThrYtNkBDpeqv/srxrJn0rL5dRJVJaAIrbbSH9lBeA0O77V4S07diwnHncfQ/+GSxvRxLVnTJ");
+						"enc:routine.encryption.key.v1:g+7IBLCd6lLtciQl1abfr0nxq1gMUsswSSunIp4+m8Fm1MtRuQ2GxSDLwc+lNZAMkcfP7jsaKzycMobr");
 				String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 
 				java.sql.Connection conn_tDBConnection_1 = null;
@@ -745,6 +745,12 @@ public class dumpCustomer implements TalendJob {
 			return this.Customer_Type_ID;
 		}
 
+		public Float Total_Margin;
+
+		public Float getTotal_Margin() {
+			return this.Total_Margin;
+		}
+
 		@Override
 		public int hashCode() {
 			if (this.hashCodeDirty) {
@@ -786,6 +792,7 @@ public class dumpCustomer implements TalendJob {
 			other.Gender = this.Gender;
 			other.Birth_Years = this.Birth_Years;
 			other.Customer_Type_ID = this.Customer_Type_ID;
+			other.Total_Margin = this.Total_Margin;
 
 		}
 
@@ -918,6 +925,13 @@ public class dumpCustomer implements TalendJob {
 
 					this.Customer_Type_ID = readString(dis);
 
+					length = dis.readByte();
+					if (length == -1) {
+						this.Total_Margin = null;
+					} else {
+						this.Total_Margin = dis.readFloat();
+					}
+
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 
@@ -947,6 +961,13 @@ public class dumpCustomer implements TalendJob {
 					this.Birth_Years = readInteger(dis);
 
 					this.Customer_Type_ID = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.Total_Margin = null;
+					} else {
+						this.Total_Margin = dis.readFloat();
+					}
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -981,6 +1002,15 @@ public class dumpCustomer implements TalendJob {
 
 				writeString(this.Customer_Type_ID, dos);
 
+				// Float
+
+				if (this.Total_Margin == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.Total_Margin);
+				}
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1011,6 +1041,15 @@ public class dumpCustomer implements TalendJob {
 
 				writeString(this.Customer_Type_ID, dos);
 
+				// Float
+
+				if (this.Total_Margin == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.Total_Margin);
+				}
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1026,6 +1065,7 @@ public class dumpCustomer implements TalendJob {
 			sb.append(",Gender=" + String.valueOf(Gender));
 			sb.append(",Birth_Years=" + String.valueOf(Birth_Years));
 			sb.append(",Customer_Type_ID=" + Customer_Type_ID);
+			sb.append(",Total_Margin=" + String.valueOf(Total_Margin));
 			sb.append("]");
 
 			return sb.toString();
@@ -1103,6 +1143,12 @@ public class dumpCustomer implements TalendJob {
 			return this.Customer_Type_ID;
 		}
 
+		public Float Total_Margin;
+
+		public Float getTotal_Margin() {
+			return this.Total_Margin;
+		}
+
 		@Override
 		public int hashCode() {
 			if (this.hashCodeDirty) {
@@ -1144,6 +1190,7 @@ public class dumpCustomer implements TalendJob {
 			other.Gender = this.Gender;
 			other.Birth_Years = this.Birth_Years;
 			other.Customer_Type_ID = this.Customer_Type_ID;
+			other.Total_Margin = this.Total_Margin;
 
 		}
 
@@ -1276,6 +1323,13 @@ public class dumpCustomer implements TalendJob {
 
 					this.Customer_Type_ID = readString(dis);
 
+					length = dis.readByte();
+					if (length == -1) {
+						this.Total_Margin = null;
+					} else {
+						this.Total_Margin = dis.readFloat();
+					}
+
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 
@@ -1305,6 +1359,13 @@ public class dumpCustomer implements TalendJob {
 					this.Birth_Years = readInteger(dis);
 
 					this.Customer_Type_ID = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.Total_Margin = null;
+					} else {
+						this.Total_Margin = dis.readFloat();
+					}
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1339,6 +1400,15 @@ public class dumpCustomer implements TalendJob {
 
 				writeString(this.Customer_Type_ID, dos);
 
+				// Float
+
+				if (this.Total_Margin == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.Total_Margin);
+				}
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1369,6 +1439,15 @@ public class dumpCustomer implements TalendJob {
 
 				writeString(this.Customer_Type_ID, dos);
 
+				// Float
+
+				if (this.Total_Margin == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeFloat(this.Total_Margin);
+				}
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1384,6 +1463,7 @@ public class dumpCustomer implements TalendJob {
 			sb.append(",Gender=" + String.valueOf(Gender));
 			sb.append(",Birth_Years=" + String.valueOf(Birth_Years));
 			sb.append(",Customer_Type_ID=" + Customer_Type_ID);
+			sb.append(",Total_Margin=" + String.valueOf(Total_Margin));
 			sb.append("]");
 
 			return sb.toString();
@@ -1478,7 +1558,7 @@ public class dumpCustomer implements TalendJob {
 				int updateKeyCount_tDBOutput_1 = 1;
 				if (updateKeyCount_tDBOutput_1 < 1) {
 					throw new RuntimeException("For update, Schema must have a key");
-				} else if (updateKeyCount_tDBOutput_1 == 4 && true) {
+				} else if (updateKeyCount_tDBOutput_1 == 5 && true) {
 					System.err.println("For update, every Schema column can not be a key");
 				}
 
@@ -1527,22 +1607,25 @@ public class dumpCustomer implements TalendJob {
 						}
 					}
 				}
-				if (!whetherExist_tDBOutput_1) {
-					try (java.sql.Statement stmtCreate_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
-						stmtCreate_tDBOutput_1.execute("CREATE TABLE \"" + tableName_tDBOutput_1
-								+ "\"(\"Customer_ID\" VARCHAR(20)  ,\"Gender\" CHAR ,\"Birth_Years\" INT4 ,\"Customer_Type_ID\" VARCHAR(20)  ,primary key(\"Customer_ID\"))");
+				if (whetherExist_tDBOutput_1) {
+					try (java.sql.Statement stmtDrop_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
+						stmtDrop_tDBOutput_1.execute("DROP TABLE \"" + tableName_tDBOutput_1 + "\"");
 					}
+				}
+				try (java.sql.Statement stmtCreate_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
+					stmtCreate_tDBOutput_1.execute("CREATE TABLE \"" + tableName_tDBOutput_1
+							+ "\"(\"Customer_ID\" VARCHAR(20)  ,\"Gender\" CHAR ,\"Birth_Years\" INT4 ,\"Customer_Type_ID\" VARCHAR(20)  ,\"Total_Margin\" FLOAT4 ,primary key(\"Customer_ID\"))");
 				}
 				java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(
 						"SELECT COUNT(1) FROM \"" + tableName_tDBOutput_1 + "\" WHERE \"Customer_ID\" = ?");
 				resourceMap.put("pstmt_tDBOutput_1", pstmt_tDBOutput_1);
 				String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1
-						+ "\" (\"Customer_ID\",\"Gender\",\"Birth_Years\",\"Customer_Type_ID\") VALUES (?,?,?,?)";
+						+ "\" (\"Customer_ID\",\"Gender\",\"Birth_Years\",\"Customer_Type_ID\",\"Total_Margin\") VALUES (?,?,?,?,?)";
 				java.sql.PreparedStatement pstmtInsert_tDBOutput_1 = conn_tDBOutput_1
 						.prepareStatement(insert_tDBOutput_1);
 				resourceMap.put("pstmtInsert_tDBOutput_1", pstmtInsert_tDBOutput_1);
 				String update_tDBOutput_1 = "UPDATE \"" + tableName_tDBOutput_1
-						+ "\" SET \"Gender\" = ?,\"Birth_Years\" = ?,\"Customer_Type_ID\" = ? WHERE \"Customer_ID\" = ?";
+						+ "\" SET \"Gender\" = ?,\"Birth_Years\" = ?,\"Customer_Type_ID\" = ?,\"Total_Margin\" = ? WHERE \"Customer_ID\" = ?";
 				java.sql.PreparedStatement pstmtUpdate_tDBOutput_1 = conn_tDBOutput_1
 						.prepareStatement(update_tDBOutput_1);
 				resourceMap.put("pstmtUpdate_tDBOutput_1", pstmtUpdate_tDBOutput_1);
@@ -1679,6 +1762,30 @@ public class dumpCustomer implements TalendJob {
 							row1.Customer_Type_ID = fid_tFileInputDelimited_1
 									.get(columnIndexWithD_tFileInputDelimited_1);
 
+							columnIndexWithD_tFileInputDelimited_1 = 4;
+
+							temp = fid_tFileInputDelimited_1.get(columnIndexWithD_tFileInputDelimited_1);
+							if (temp.length() > 0) {
+
+								try {
+
+									row1.Total_Margin = ParserUtils.parseTo_Float(temp);
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_1) {
+									globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE",
+											ex_tFileInputDelimited_1.getMessage());
+									rowstate_tFileInputDelimited_1.setException(new RuntimeException(String.format(
+											"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+											"Total_Margin", "row1", temp, ex_tFileInputDelimited_1),
+											ex_tFileInputDelimited_1));
+								}
+
+							} else {
+
+								row1.Total_Margin = null;
+
+							}
+
 							if (rowstate_tFileInputDelimited_1.getException() != null) {
 								throw rowstate_tFileInputDelimited_1.getException();
 							}
@@ -1804,10 +1911,16 @@ public class dumpCustomer implements TalendJob {
 									pstmtUpdate_tDBOutput_1.setString(3, row2.Customer_Type_ID);
 								}
 
-								if (row2.Customer_ID == null) {
-									pstmtUpdate_tDBOutput_1.setNull(4 + count_tDBOutput_1, java.sql.Types.VARCHAR);
+								if (row2.Total_Margin == null) {
+									pstmtUpdate_tDBOutput_1.setNull(4, java.sql.Types.FLOAT);
 								} else {
-									pstmtUpdate_tDBOutput_1.setString(4 + count_tDBOutput_1, row2.Customer_ID);
+									pstmtUpdate_tDBOutput_1.setFloat(4, row2.Total_Margin);
+								}
+
+								if (row2.Customer_ID == null) {
+									pstmtUpdate_tDBOutput_1.setNull(5 + count_tDBOutput_1, java.sql.Types.VARCHAR);
+								} else {
+									pstmtUpdate_tDBOutput_1.setString(5 + count_tDBOutput_1, row2.Customer_ID);
 								}
 
 								try {
@@ -1853,6 +1966,12 @@ public class dumpCustomer implements TalendJob {
 									pstmtInsert_tDBOutput_1.setNull(4, java.sql.Types.VARCHAR);
 								} else {
 									pstmtInsert_tDBOutput_1.setString(4, row2.Customer_Type_ID);
+								}
+
+								if (row2.Total_Margin == null) {
+									pstmtInsert_tDBOutput_1.setNull(5, java.sql.Types.FLOAT);
+								} else {
+									pstmtInsert_tDBOutput_1.setFloat(5, row2.Total_Margin);
 								}
 
 								try {
@@ -2371,7 +2490,7 @@ public class dumpCustomer implements TalendJob {
 	public int portTraces = 4334;
 	public String clientHost;
 	public String defaultClientHost = "localhost";
-	public String contextStr = "jordan";
+	public String contextStr = "alice";
 	public boolean isDefaultContext = true;
 	public String pid = "0";
 	public String rootPid = null;
@@ -2749,6 +2868,6 @@ public class dumpCustomer implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 80709 characters generated by Talend Open Studio for Data Integration on the
- * 9 mai 2024 à 20:51:55 CEST
+ * 84477 characters generated by Talend Open Studio for Data Integration on the
+ * 10 mai 2024 à 18:19:53 CEST
  ************************************************************************************************/

@@ -54,7 +54,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Vecqc65MvHM2c71ginXiKcMl6Ai4NW78hEO2NUgD" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:rjr+w7NaAE7qdZBw4tJjLzmBwKpNkEinLMQUl819" show="false"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -89,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:PV99IaaXH4nARGD/NlUUO+ZUAKUpi4X+A4HwdzOa" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:q8bpy3Rd7UqErOoE1Wg/O1oMtxoYYocHzr3ZlVWg" show="false"/>
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -125,8 +125,6 @@
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_Te6JUA4iEe-HZfgavK5q_A - OrderLine" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.folderName+&quot;/files/TablesToDump/OrderLine.csv&quot;"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -314,7 +312,7 @@
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;casiop-sid-24-ajj&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:potkQC5uxZn1lgcC5I8ZJ/YErVTWi4yzSvJP4PzCFP/UF2YlShk+8mQiznE8zanbDbQS1VKSs0AH1QgzDU0=" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:mXU2yi7wdbSxeH++7I5lwhwMcdy3I/m4Cl95ls3/XbhDUWKq+G/eZ6ovCdT3F+fI5A2goz57haGQYTNTX30=" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Order_Line&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
@@ -444,12 +442,10 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;casiop-sid-24-ajj_bdd&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;casiop-sid-24-ajj&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:O2hndyq0NWRLsnZRUXGigYOmxc4zCsxGNAcKCUUzj/oIzcAEZCAhoLPI5Pizil/tJuPrMkD8e7dQYd5KX+8="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9GjzGUSvwDM0p0lZmNzC062D7AhugIypyfMK9X690O1aO2DSFXD3qhgDUcwAexYu8+PtCsuhHxpSeEm+d4c="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;OrderLine&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="FILE" name="FILENAME" value="context.folderName+&quot;/files/TablesToDump/OrderLine.csv&quot;"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_Te6JUA4iEe-HZfgavK5q_A - OrderLine" show="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -491,6 +487,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="Country"/>
       <elementValue elementRef="FORCENOTNULL" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="OrderLine" name="tDBOutputBulkExec_1">
       <column comment="" key="true" length="20" name="Order_ID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="20" name="Order_Item_Num" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
@@ -518,13 +515,11 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;casiop-sid-24-ajj_bdd&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;casiop-sid-24-ajj&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:vedHri2NeAwIPVHX/udconQR8boEulmPPsOYjyJ6ACZjkPvpaFKRQZVShOIfAeyyTeULG3xmnetSQYhg/3c="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:d1P9G1qlri9WcjXpgXc7/6dnBjnaw4JWwT0uOA6bd9PEerSykuQvwWOzDp7SgG9ZD8eGWJzpTXam5fUapMo="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;OrderLine&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
     <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before bulk insert" show="false"/>
     <elementParameter field="FILE" name="FILENAME" value="context.folderName+&quot;/files/TablesToDump/OrderLine.csv&quot;"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_Te6JUA4iEe-HZfgavK5q_A - OrderLine" show="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -564,6 +559,7 @@
       <elementValue elementRef="FORCENOTNULL" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="DRIVER_IF_GREENPLUM" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="OrderLine" name="tDBBulkExec_1">
       <column comment="" key="true" length="20" name="Order_ID" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="20" name="Order_Item_Num" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
@@ -592,6 +588,7 @@
     <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;\&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutputBulk_1"/>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tLogRow_1">
@@ -605,7 +602,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

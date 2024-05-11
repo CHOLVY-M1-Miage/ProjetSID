@@ -14,7 +14,9 @@
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_6fdo8A7AEe-5n4nalt74VA" name="Order_Type" label="Order_Type" length="20" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_8ceIMA7AEe-5n4nalt74VA" name="Order_Date" label="Order_Date" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_9onLMA7AEe-5n4nalt74VA" name="Delivery_Date" label="Delivery_Date" length="-1" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_wGza8A7fEe-zvrRL-hVeRA" name="Customer_ID" label="Customer_ID" talendType="id_String"/>
       <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="__T9SsA7AEe-5n4nalt74VA" name="Country" label="Country" length="20" talendType="id_String"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_x7UFgA7fEe-zvrRL-hVeRA" name="Age_At_Order_Time" label="Age_At_Order_Time" length="-1" talendType="id_Integer"/>
     </ownedElement>
   </TalendMetadata:GenericPackage>
 </xmi:XMI>

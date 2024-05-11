@@ -84,5 +84,14 @@ public class fonctionsPerso {
 	        }
 	    }
 	
+		public static Integer getDecadeAtOrderTime(String orderDate, Integer birthYear) {
+			if (birthYear != null) {
+				int orderYear = Integer.parseInt(orderDate.split(" ")[5]);
+				int delta = (orderYear - birthYear);
+				return delta - delta % 10;
+			} else {
+				return null;
+			}
+		}
 	
 }
